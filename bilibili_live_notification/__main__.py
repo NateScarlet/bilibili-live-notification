@@ -12,8 +12,9 @@ async def _debug(event):
     logging.debug(event)
 
 
-def _format_time(v: datetime) -> str :
-    return v.strftime("%Y-%m-%d %H:%m:%S")
+def _format_time(v: datetime) -> str:
+    return v.strftime("%Y-%m-%d %H:%M:%S")
+
 
 async def _handle_live(event):
     logging.info(event)
