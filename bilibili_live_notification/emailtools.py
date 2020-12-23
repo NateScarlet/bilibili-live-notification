@@ -5,7 +5,7 @@ import smtplib
 from . import config
 
 
-def send_to(to_addrs: list, subject: str, payload: str, ):
+def send(to_addrs: list, subject: str, payload: str):
     """Send a mail.
 
     Args:
@@ -13,6 +13,8 @@ def send_to(to_addrs: list, subject: str, payload: str, ):
         subject (str): Mail subject.
         payload (str): Mail payload.
     """
+    if not to_addrs:
+        return
 
     msg = email.message.Message()
     msg['From'] = email.utils.formataddr(
@@ -36,7 +38,3 @@ def send_to(to_addrs: list, subject: str, payload: str, ):
         to_addrs=to_addrs,
         msg=msg.as_bytes())
     session.quit()
-
-def send(subject: str, payload: str):
-    """Send email to config specifield addresses.  """
-    send_to(config.EMAIL_TO, subject, payload)
