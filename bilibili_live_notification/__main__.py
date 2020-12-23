@@ -12,13 +12,16 @@ async def _debug(event):
     logging.debug(event)
 
 
+def _format_time(v: datetime) -> str :
+    return v.strftime("%Y-%m-%d %H:%m:%S")
+
 async def _handle_live(event):
     logging.info(event)
     rid = event["room_display_id"]
     emailtools.send(
         config.get_room_email_to(rid),
         f'[开播]{config.get_room_name(rid)}',
-        f'{datetime.now()} https://live.bilibili.com/{rid} ',
+        f'{_format_time(datetime.now())} https://live.bilibili.com/{rid} ',
     )
 
 
@@ -51,6 +54,6 @@ if __name__ == '__main__':
         emailtools.send(
             config.TEST_EMAIL_TO,
             '[启动]哔哩哔哩开播提醒',
-            f'{datetime.now()} 服务启动测试邮件',
+            f'{_format_time(datetime.now())} 服务启动测试邮件',
         )
     connect_all_LiveDanmaku(*iterate_rooms())
