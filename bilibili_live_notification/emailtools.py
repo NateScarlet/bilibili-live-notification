@@ -24,18 +24,21 @@ def send(to_addrs: list, subject: str, payload: str):
     msg['Bcc'] = ','.join(to_addrs)
     msg['Subject'] = subject
     msg.add_header("Sender", config.EMAIL_FROM)
-    msg.set_payload(payload)
-    msg.set_charset('utf-8')
+    msg.set_payload(payload, "utf-8")
 
     session = smtplib.SMTP_SSL(
         host=config.EMAIL_HOST,
-        port=config.EMAIL_PORT)
+        port=config.EMAIL_PORT,
+    )
+
     session.ehlo(config.EMAIL_HOST)
     session.login(
         user=config.EMAIL_USER,
-        password=config.EMAIL_PASSWORD)
+        password=config.EMAIL_PASSWORD,
+    )
     session.sendmail(
         from_addr=config.EMAIL_USER,
         to_addrs=to_addrs,
-        msg=msg.as_bytes())
+        msg=msg.as_string(),
+    )
     session.quit()
