@@ -1,15 +1,11 @@
+"""Send email notification when bilibili live start. """
 import asyncio
 import logging
-import os
 from datetime import datetime
 
 from bilibili_api import live
 
 from . import config, emailtools
-
-
-def _get_room_name(rid):
-    return os.getenv(f'BILIBILI_ROOM_NAME_{rid}') or rid
 
 
 async def _debug(event):
@@ -18,10 +14,11 @@ async def _debug(event):
 
 async def _handle_live(event):
     logging.info(event)
+    rid = event["room_display_id"]
     emailtools.send(
-        config.EMAIL_TO,
-        f'[开播]{_get_room_name(event["room_display_id"])}',
-        f'{datetime.now()} https://live.bilibili.com/{event["room_display_id"]} ',
+        config.get_room_email_to(rid),
+        f'[开播]{config.get_room_name(rid)}',
+        f'{datetime.now()} https://live.bilibili.com/{rid} ',
     )
 
 
