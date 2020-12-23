@@ -7,14 +7,15 @@ def _getenv_csv(name: str) -> list:
     return [i for i in (os.getenv(name) or "").split(",") if i]
 
 
-EMAIL_FROM = os.getenv(
-    "EMAIL_FROM") or "bilibili-live-notification@noreply.example.com"
+EMAIL_FROM = (os.getenv("EMAIL_FROM")
+              or "bilibili-live-notification@noreply.github.com")
 EMAIL_HOST = os.getenv("EMAIL_HOST") or "smtp.qq.com"
 EMAIL_PORT = int(os.getenv("EMAIL_PORT") or "465")
 EMAIL_USER = os.getenv("EMAIL_USER") or "example@qq.com"
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD") or "<email password>"
 EMAIL_TO = _getenv_csv("EMAIL_TO")
 TEST_EMAIL_TO = _getenv_csv("TEST_EMAIL_TO")
+
 
 def discover_bilibili_room_id() -> Iterator[str]:
     """get room id from env vars that has BILIBILI_ROOM_NAME_ prefix
