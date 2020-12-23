@@ -49,10 +49,11 @@ def connect_all_LiveDanmaku(*livedanmaku_classes):
 
 if __name__ == '__main__':
     logging.root.setLevel(logging.INFO)
-    logging.info('发送测试邮件')
-    emailtools.send(
-        config.TEST_EMAIL_TO,
-        '[启动]哔哩哔哩开播提醒',
-        f'{datetime.now()} 服务启动测试邮件',
-    )
+    if config.TEST_EMAIL_TO:
+        logging.info('发送测试邮件')
+        emailtools.send(
+            config.TEST_EMAIL_TO,
+            '[启动]哔哩哔哩开播提醒',
+            f'{datetime.now()} 服务启动测试邮件',
+        )
     connect_all_LiveDanmaku(*iterate_rooms())
