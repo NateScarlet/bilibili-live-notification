@@ -23,7 +23,7 @@ async def _handle_live(event):
 
 
 def iterate_rooms():
-    for i in config.BILIBILI_ROOM_ID:
+    for i in config.discover_bilibili_room_id():
         room = live.LiveDanmaku(i)
         room.on("LIVE")(_handle_live)
         yield room
