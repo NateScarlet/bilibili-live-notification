@@ -2,6 +2,6 @@ version: "2.4"
 services:
   bilibili-live-notification:
     restart: unless-stopped
-    image: ghcr.io/natescarlet/bilibili-live-notification:master
+    image: natescarlet/bilibili-live-notification:master
     env_file: 
       - ./.env
