@@ -12,4 +12,5 @@ RUN pip install -U pip &&\
 
 COPY ./ ./
 
+ENV TZ=Asia/Shanghai
 CMD [ "python3", "-m", "bilibili_live_notification" ]
