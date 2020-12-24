@@ -1,6 +1,7 @@
 version: "2.4"
 services:
   bilibili-live-notification:
+    container_name: bilibili-live-notification
     restart: unless-stopped
     image: natescarlet/bilibili-live-notification:master
     env_file: 
