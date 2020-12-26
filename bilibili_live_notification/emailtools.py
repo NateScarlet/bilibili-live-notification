@@ -20,7 +20,7 @@ def send(to_addrs: list, subject: str, payload: str):
     msg['From'] = email.utils.formataddr(
         ('哔哩哔哩开播提醒', config.EMAIL_FROM),
     )
-    msg['To'] = config.EMAIL_FROM
+    msg['To'] = msg["From"]
     msg['Bcc'] = ','.join(to_addrs)
     msg['Subject'] = subject
     msg.add_header("Sender", config.EMAIL_FROM)
