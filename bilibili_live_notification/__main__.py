@@ -1,7 +1,7 @@
 """Send email notification when bilibili live start. """
 import asyncio
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from bilibili_api import live
 
@@ -16,14 +16,25 @@ def _format_time(v: datetime) -> str:
     return v.strftime("%Y-%m-%d %H:%M:%S")
 
 
+LAST_EMAIL_SEND_TIME = {}
+
+
 async def _handle_live(event):
     logging.info(event)
     rid = event["room_display_id"]
+
+    now = datetime.now()
+    if (rid in LAST_EMAIL_SEND_TIME and
+            LAST_EMAIL_SEND_TIME[rid] > now - timedelta(seconds=config.BILIBILI_EMAIL_THROTTLE)):
+        logging.info("email throttled: %s", rid)
+        return
+
     emailtools.send(
         config.get_room_email_to(rid),
         f'[开播]{config.get_room_name(rid)}',
-        f'{_format_time(datetime.now())} https://live.bilibili.com/{rid} ',
+        f'{_format_time(now)} https://live.bilibili.com/{rid} ',
     )
+    LAST_EMAIL_SEND_TIME[rid] = now
 
 
 def iterate_rooms():

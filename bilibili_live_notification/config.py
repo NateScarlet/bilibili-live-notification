@@ -15,6 +15,7 @@ EMAIL_USER = os.getenv("EMAIL_USER") or "example@qq.com"
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD") or "<email password>"
 EMAIL_TO = _getenv_csv("EMAIL_TO")
 TEST_EMAIL_TO = _getenv_csv("TEST_EMAIL_TO")
+BILIBILI_EMAIL_THROTTLE = int(os.getenv("BILIBILI_EMAIL_THROTTLE") or "600")
 
 
 def discover_bilibili_room_id() -> Iterator[str]:
