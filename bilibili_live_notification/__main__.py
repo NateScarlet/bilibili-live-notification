@@ -11,17 +11,18 @@ def _format_time(v: datetime) -> str:
     return v.strftime("%H:%M:%S %Y-%m-%d")
 
 
+LOGGER = logging.getLogger(__name__)
 LAST_EMAIL_SEND_TIME = {}
 
 
 async def _handle_live(event):
-    logging.info(event)
+    LOGGER.info(event)
     rid = event["room_display_id"]
 
     now = datetime.now()
     if (rid in LAST_EMAIL_SEND_TIME and
             LAST_EMAIL_SEND_TIME[rid] > now - timedelta(seconds=config.BILIBILI_EMAIL_THROTTLE)):
-        logging.info("email throttled: %s", rid)
+        LOGGER.info("email throttled: %s", rid)
         return
 
     emailtools.send(
@@ -40,9 +41,15 @@ def iterate_rooms():
 
 
 if __name__ == '__main__':
-    logging.root.setLevel(logging.INFO)
+    LOGGER.setLevel(logging.INFO)
+    handler = logging.StreamHandler()
+    handler.setFormatter(logging.Formatter(
+        "%(levelname)-6s[%(asctime)s]:%(name)s:%(lineno)d: %(message)s",
+        "%Y-%m-%d %H:%M:%S"
+    ))
+    LOGGER.addHandler(handler)
     if config.TEST_EMAIL_TO:
-        logging.info('发送测试邮件')
+        LOGGER.info('发送测试邮件')
         emailtools.send(
             config.TEST_EMAIL_TO,
             f'[启动] - {_format_time(datetime.now())}',
