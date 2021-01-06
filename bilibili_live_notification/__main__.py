@@ -8,10 +8,6 @@ from bilibili_api import live
 from . import config, emailtools
 
 
-async def _debug(event):
-    logging.debug(event)
-
-
 def _format_time(v: datetime) -> str:
     return v.strftime("%H:%M:%S %Y-%m-%d")
 
