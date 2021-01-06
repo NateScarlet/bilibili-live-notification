@@ -37,7 +37,7 @@ def get_room_name(room_display_id: str) -> str:
         room_display_id (str): Room display id
 
     Returns:
-        list: NAME config for this room.
+        str: NAME config for this room.
     """
 
     return os.getenv(f'BILIBILI_ROOM_NAME_{room_display_id}') or room_display_id
