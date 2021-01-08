@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.8-slim
 
 ARG PIP_MIRROR
 ENV PIP_INDEX_URL=${PIP_MIRROR}
