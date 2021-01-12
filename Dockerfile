@@ -11,9 +11,6 @@ RUN if [ ! -z "${ALPINE_MIRROR}" ]; then \
     cat /etc/apk/repositories; \
     fi;
 
-RUN apk add --no-cache \
-        tzdata
-
 WORKDIR /app
 
 COPY ./requirements.txt ./
@@ -27,5 +24,6 @@ RUN set -ex\
 
 COPY ./ ./
 
-ENV TZ=Asia/Shanghai
+# https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html
+ENV TZ=-8
 CMD [ "python3", "-m", "bilibili_live_notification" ]
