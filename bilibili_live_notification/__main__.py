@@ -56,3 +56,4 @@ if __name__ == '__main__':
             '服务启动测试邮件',
         )
     live.connect_all_LiveDanmaku(*iterate_rooms())
+    LOGGER.info('未配置要监控的直播间，请查看 README.md')
