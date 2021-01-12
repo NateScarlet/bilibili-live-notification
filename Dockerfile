@@ -25,5 +25,5 @@ RUN set -ex\
 COPY ./ ./
 
 # https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html
-ENV TZ=-8
+ENV TZ=CST-8
 CMD [ "python3", "-m", "bilibili_live_notification" ]
