@@ -11,6 +11,9 @@ RUN if [ ! -z "${ALPINE_MIRROR}" ]; then \
     cat /etc/apk/repositories; \
     fi;
 
+RUN apk add --no-cache \
+        tzdata
+
 WORKDIR /app
 
 COPY ./requirements.txt ./
