@@ -15,14 +15,12 @@ WORKDIR /app
 
 COPY ./requirements.txt ./
 RUN set -ex\
-    && apk add --no-cache \
+    && apk add --no-cache --virtual .build-deps \
         gcc \
         musl-dev \
     && pip install -U pip\
     && pip install -r ./requirements.txt \
-    && apk del \
-        gcc \
-        musl-dev 
+    && apk del .build-deps
 
 COPY ./ ./
 
