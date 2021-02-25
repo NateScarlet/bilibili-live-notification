@@ -1,28 +1,89 @@
 """application config. """
 import os
 from typing import Iterator
+import jinja2
+
+from datetime import datetime
+from typing import Optional, Tuple
+
+class _ChainableDebugUndefined(jinja2.ChainableUndefined, jinja2.DebugUndefined):
+    pass
+
+def get(name: str, data: Optional[dict] = None) -> str:
+    """get string config
+
+    Args:
+        name (str): env var name
+        data (Optional[dict], optional): template variables. Defaults to None.
+
+    Returns:
+        str: rendered config value
+    """
+
+    value = os.getenv(name) or ""
+    var_prefix = "TEMPLATE_VAR_"
+    if name.startswith(var_prefix):
+        return value
+    return jinja2.Template(
+        value,
+        undefined=_ChainableDebugUndefined,
+    ).render(
+        **dict(get_items(var_prefix, data)),
+        now=datetime.now(),
+        **(data or {}),
+    )
 
 
-def _getenv_csv(name: str) -> list:
-    return [i for i in (os.getenv(name) or "").split(",") if i]
+def parse_csv(v: Optional[str]) -> list:
+    """parse comma separated values.
+
+    Args:
+        v (Optional[str]): value
+
+    Returns:
+        list: values
+    """
+    return [i for i in (v or '').split(",") if i]
+
+def get_csv(name: str, data: Optional[dict] = None) -> list:
+    """get csv config
+
+    Args:
+        name (str): env var name
+        data (Optional[dict], optional): template variables. Defaults to None.
+
+    Returns:
+        list: values
+    """
+    return parse_csv(get(name, data))
+
+def get_items(prefix: str, data: Optional[dict] = None) -> Iterator[Tuple[str, str]]:
+    """get room id from env vars that has BILIBILI_ROOM_NAME_ prefix
+
+    Yields:
+        Iterator[str]: room ids.
+    """
+    for i in os.environ.keys():
+        if i.startswith(prefix):
+            yield i[len(prefix):], get(i, data)
 
 
-EMAIL_FROM = (os.getenv("EMAIL_FROM")
+EMAIL_FROM = (get("EMAIL_FROM")
               or "bilibili-live-notification@noreply.github.com")
-EMAIL_HOST = os.getenv("EMAIL_HOST") or "smtp.qq.com"
-EMAIL_PORT = int(os.getenv("EMAIL_PORT") or "465")
-EMAIL_USER = os.getenv("EMAIL_USER") or "example@qq.com"
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD") or "<email password>"
-EMAIL_TO = _getenv_csv("EMAIL_TO")
-TEST_EMAIL_TO = _getenv_csv("TEST_EMAIL_TO")
-BILIBILI_EMAIL_THROTTLE = int(os.getenv("BILIBILI_EMAIL_THROTTLE") or "600")
+EMAIL_HOST = get("EMAIL_HOST") or "smtp.qq.com"
+EMAIL_PORT = int(get("EMAIL_PORT") or "465")
+EMAIL_USER = get("EMAIL_USER") or "example@qq.com"
+EMAIL_PASSWORD = get("EMAIL_PASSWORD") or "<email password>"
+EMAIL_TO = parse_csv(get("EMAIL_TO"))
+TEST_EMAIL_TO = parse_csv(get("TEST_EMAIL_TO"))
+BILIBILI_EMAIL_THROTTLE = int(get("BILIBILI_EMAIL_THROTTLE") or "600")
 
 
 def discover_bilibili_room_id() -> Iterator[str]:
     """get room id from env vars that has BILIBILI_ROOM_NAME_ prefix
 
     Yields:
-        Iterator[str]: room ids. 
+        Iterator[str]: room ids.
     """
     prefix = "BILIBILI_ROOM_NAME_"
     for i in os.environ.keys():
@@ -53,4 +114,4 @@ def get_room_email_to(room_display_id: str) -> list:
         list: EMAIL_TO config for this room.
     """
 
-    return _getenv_csv(f"BILIBILI_ROOM_EMAIL_TO_{room_display_id}") or EMAIL_TO
+    return parse_csv(get(f"BILIBILI_ROOM_EMAIL_TO_{room_display_id}")) or EMAIL_TO
