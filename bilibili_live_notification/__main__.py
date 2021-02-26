@@ -29,7 +29,7 @@ async def _handle_live(event):
     room_data = live.get_room_info(rid)
     name = config.get_room_name(rid)
     url = f'https://live.bilibili.com/{rid}'
-    await webhook.triggerMany(
+    await webhook.trigger_many(
         (config.get_csv(f"BILIBILI_ROOM_LIVE_WEBHOOK_{rid}") or
          config.get_csv(f"BILIBILI_LIVE_WEBHOOK")),
         {
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     LOGGER.addHandler(handler)
     webhook.LOGGER.addHandler(handler)
     asyncio.get_event_loop().run_until_complete(
-        webhook.triggerMany(config.get_csv("SERVER_START_WEBHOOK")),
+        webhook.trigger_many(config.get_csv("SERVER_START_WEBHOOK")),
     )
     if config.TEST_EMAIL_TO:
         LOGGER.info('发送测试邮件')

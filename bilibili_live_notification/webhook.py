@@ -27,5 +27,5 @@ async def trigger(name: str, data: Optional[dict] = None) -> None:
     except ClientError as ex:
         LOGGER.error("webhook failed: %s: %s", name, ex)
 
-async def triggerMany(names: Iterable[str], data: Optional[dict] = None) -> None:
+async def trigger_many(names: Iterable[str], data: Optional[dict] = None) -> None:
     await asyncio.gather(*(trigger(i, data) for i in names))
