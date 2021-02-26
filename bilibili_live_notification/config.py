@@ -28,9 +28,11 @@ def get(name: str, data: Optional[dict] = None) -> str:
         value,
         undefined=_ChainableDebugUndefined,
     ).render(
-        **dict(get_items(var_prefix, data)),
-        now=datetime.now(),
-        **(data or {}),
+        **{
+            **dict(now=datetime.now()),
+            **dict(get_items(var_prefix, data)),
+            **(data or {}),
+        },
     )
 
 

@@ -32,15 +32,18 @@ async def _handle_live(event):
     await webhook.triggerMany(
         (config.get_csv(f"BILIBILI_ROOM_LIVE_WEBHOOK_{rid}") or
          config.get_csv(f"BILIBILI_LIVE_WEBHOOK")),
-        dict(
-            event=event,
-            room=dict(
-                name=name,
-                title=room_data["room_info"]["title"],
-                url=url,
-                data=room_data,
+        {
+            **dict(
+                event=event,
+                room=dict(
+                    name=name,
+                    title=room_data["room_info"]["title"],
+                    url=url,
+                    data=room_data,
+                ),
             ),
-        )
+            **dict(config.get_items(f"BILIBILI_ROOM_TEMPLATE_VAR_{rid}_")),
+        },
     )
     # TODO: support template for email subject and body
     emailtools.send(
