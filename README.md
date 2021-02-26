@@ -18,6 +18,46 @@
 
 推荐将环境变量写入 .env 文件然后再使用 [godotenv](https://github.com/joho/godotenv) 在配置的环境下执行命令
 
+### 模版
+
+除模版变量设置外的所有设置都支持模版，使用 [JinJa2](https://jinja.palletsprojects.com/) 作为模版引擎
+
+可通过设置定义变量，并且提供内置变量。
+
+全局模版变量值：
+
+- now: datetime.datetime
+
+  当前时间
+
+开播提醒：
+
+- event:
+
+  ```typescript
+  {
+      room_display_id: number,
+      room_real_id: number,
+      type: string,
+      data: unknown | number
+  }
+  ```
+
+  变量事件，参见 [bilibili-api 文档](https://github.com/Passkou/bilibili_api/blob/main/docs/%E6%A8%A1%E5%9D%97/live.md#%E4%BA%8B%E4%BB%B6)
+
+- room:
+
+  ```typescript
+  {
+      name: string,
+      title: string,
+      url: string,
+      data: unknown
+  }
+  ```
+
+  房间信息
+
 ## 从命令行运行
 
 ```bash
