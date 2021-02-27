@@ -38,8 +38,6 @@
 
 开播提醒：
 
-RoomData: [房间数据](./room_info.ipynb)
-
 - event:
 
   ```typescript
@@ -60,11 +58,11 @@ RoomData: [房间数据](./room_info.ipynb)
       name: string,
       title: string,
       url: string,
-      data: RoomData
+      data: unknown,
   }
   ```
 
-  房间信息
+  房间信息，参见 [room.ipynb](./room.ipynb)
 
 ## 从命令行运行
 
