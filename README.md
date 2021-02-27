@@ -38,6 +38,8 @@
 
 开播提醒：
 
+RoomData: [房间数据](./room_info.ipynb)
+
 - event:
 
   ```typescript
@@ -49,7 +51,7 @@
   }
   ```
 
-  变量事件，参见 [bilibili-api 文档](https://github.com/Passkou/bilibili_api/blob/main/docs/%E6%A8%A1%E5%9D%97/live.md#%E4%BA%8B%E4%BB%B6)
+  变量事件
 
 - room:
 
@@ -58,7 +60,7 @@
       name: string,
       title: string,
       url: string,
-      data: unknown
+      data: RoomData
   }
   ```
 
