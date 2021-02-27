@@ -62,10 +62,9 @@ if __name__ == '__main__':
         "%(levelname)-6s[%(asctime)s]:%(name)s:%(lineno)d: %(message)s",
         "%Y-%m-%d %H:%M:%S"
     ))
-    def _setup_logger(logger):
+    for logger in [LOGGER, webhook.LOGGER, room.LOGGER]:
         logger.setLevel(logging.INFO)
         logger.addHandler(handler)
-    map(_setup_logger, all_logger)
 
     asyncio.get_event_loop().run_until_complete(
         webhook.trigger_many(config.get_csv("SERVER_START_WEBHOOK")),
