@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 from bilibili_api import live
 
-from . import config, emailtools, webhook
+from . import config, emailtools, webhook, room
 
 
 def _format_time(v: datetime) -> str:
@@ -26,21 +26,15 @@ async def _handle_live(event):
         LOGGER.info("email throttled: %s", rid)
         return
 
-    room_data = live.get_room_info(rid)
-    name = config.get_room_name(rid)
-    url = f'https://live.bilibili.com/{rid}'
+    room_data = room.get(rid)
+
     await webhook.trigger_many(
         (config.get_csv(f"BILIBILI_ROOM_LIVE_WEBHOOK_{rid}") or
-         config.get_csv(f"BILIBILI_LIVE_WEBHOOK")),
+         config.get_csv("BILIBILI_LIVE_WEBHOOK")),
         {
             **dict(
                 event=event,
-                room=dict(
-                    name=name,
-                    title=room_data["room_info"]["title"],
-                    url=url,
-                    data=room_data,
-                ),
+                room=room_data,
             ),
             **dict(config.get_items(f"BILIBILI_ROOM_TEMPLATE_VAR_{rid}_")),
         },
@@ -48,29 +42,31 @@ async def _handle_live(event):
     # TODO: support template for email subject and body
     emailtools.send(
         config.get_room_email_to(rid),
-        f'[开播]{config.get_room_name(rid)} - {_format_time(now)}',
-        f'{url} ',
+        f'[开播]{room_data["name"]} - {_format_time(now)}',
+        f'{room_data["url"]} ',
     )
     LAST_EMAIL_SEND_TIME[rid] = now
 
 
-def iterate_rooms():
+def _iterate_rooms():
     for i in config.discover_bilibili_room_id():
-        room = live.LiveDanmaku(i)
-        room.on("LIVE")(_handle_live)
-        yield room
+        room1 = live.LiveDanmaku(i)
+        room1.on("LIVE")(_handle_live)
+        yield room1
 
 
 if __name__ == '__main__':
-    LOGGER.setLevel(logging.INFO)
-    webhook.LOGGER.setLevel(logging.INFO)
+    all_logger = [LOGGER, webhook.LOGGER, room.LOGGER]
     handler = logging.StreamHandler()
     handler.setFormatter(logging.Formatter(
         "%(levelname)-6s[%(asctime)s]:%(name)s:%(lineno)d: %(message)s",
         "%Y-%m-%d %H:%M:%S"
     ))
-    LOGGER.addHandler(handler)
-    webhook.LOGGER.addHandler(handler)
+    def _setup_logger(logger):
+        logger.setLevel(logging.INFO)
+        logger.addHandler(handler)
+    map(_setup_logger, all_logger)
+
     asyncio.get_event_loop().run_until_complete(
         webhook.trigger_many(config.get_csv("SERVER_START_WEBHOOK")),
     )
@@ -81,5 +77,5 @@ if __name__ == '__main__':
             f'[启动] - {_format_time(datetime.now())}',
             '服务启动测试邮件',
         )
-    live.connect_all_LiveDanmaku(*iterate_rooms())
+    live.connect_all_LiveDanmaku(*_iterate_rooms())
     LOGGER.info('未配置要监控的直播间，请查看 README.md')
