@@ -51,7 +51,7 @@
   }
   ```
 
-  变量事件，参见 [event.example.json](./event.example.json)
+  变量事件，data 字段的类型参见 [event.example.json](./event.example.json)
 
 - room:
 
