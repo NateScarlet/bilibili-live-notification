@@ -11,13 +11,10 @@ from . import config, emailtools, webhook, room
 def _format_time(v: datetime) -> str:
     return v.strftime("%H:%M:%S %Y-%m-%d")
 
-
 LOGGER = logging.getLogger(__name__)
 LAST_EMAIL_SEND_TIME = {}
 
-
 async def _handle_live(event):
-    LOGGER.info(event)
     rid = event["room_display_id"]
 
     now = datetime.now()
@@ -26,21 +23,8 @@ async def _handle_live(event):
         LOGGER.info("email throttled: %s", rid)
         return
 
-    await asyncio.sleep(1) # wait room cover
-    room_data = room.get(rid)
-
-    await webhook.trigger_many(
-        (config.get_csv(f"BILIBILI_ROOM_LIVE_WEBHOOK_{rid}") or
-         config.get_csv("BILIBILI_LIVE_WEBHOOK")),
-        {
-            **dict(
-                event=event,
-                room=room_data,
-            ),
-            **dict(config.get_items(f"BILIBILI_ROOM_TEMPLATE_VAR_{rid}_")),
-        },
-    )
     # TODO: support template for email subject and body
+    room_data = await room.get_with_cache(rid)
     emailtools.send(
         config.get_room_email_to(rid),
         f'[开播]{room_data["name"]} - {_format_time(now)}',
@@ -49,10 +33,38 @@ async def _handle_live(event):
     LAST_EMAIL_SEND_TIME[rid] = now
 
 
+async def _handle_event(event):
+    rid = event["room_display_id"]
+    event_type = event["type"]
+    # update room data cache
+    if event_type in ("LIVE", "PREPARING", "ROOM_RANK"):
+        await asyncio.sleep(1)  # wait room cover
+        room_data = await room.get_with_cache(rid, ttl=0)
+
+    if event_type == "LIVE":
+        LOGGER.info(event)
+        await _handle_live(event)
+    else:
+        LOGGER.debug(event)
+
+    room_data = await room.get_with_cache(rid)
+    await webhook.trigger_many(
+        (config.get_csv(f"BILIBILI_ROOM_{event_type}_WEBHOOK_{rid}") or
+         config.get_csv(f"BILIBILI_{event_type}_WEBHOOK")),
+        {
+            **dict(
+                event=event,
+                room=room_data,
+            ),
+            **dict(config.get_items(f"BILIBILI_ROOM_TEMPLATE_VAR_{rid}_")),
+        },
+    )
+
+
 def _iterate_rooms():
     for i in config.discover_bilibili_room_id():
         room1 = live.LiveDanmaku(i)
-        room1.on("LIVE")(_handle_live)
+        room1.on("ALL")(_handle_event)
         yield room1
 
 
@@ -63,8 +75,13 @@ if __name__ == '__main__':
         "%(levelname)-6s[%(asctime)s]:%(name)s:%(lineno)d: %(message)s",
         "%Y-%m-%d %H:%M:%S"
     ))
+    debug_logger_names = config.get_csv("DEBUG")
     for logger in [LOGGER, webhook.LOGGER, room.LOGGER]:
-        logger.setLevel(logging.INFO)
+        logger.setLevel(
+            logging.DEBUG
+            if logger.name in debug_logger_names
+            else logging.INFO
+        )
         logger.addHandler(handler)
 
     asyncio.get_event_loop().run_until_complete(

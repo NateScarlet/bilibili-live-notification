@@ -1,13 +1,17 @@
 # -*- coding=UTF-8 -*-
 """live room operations.  """
 
+import asyncio
 import logging
+import time
+from typing import Dict, Tuple
 
 from bilibili_api import live
 
 from . import config
 
 LOGGER = logging.getLogger(__name__)
+
 
 def get(rid: str) -> dict:
     """Get room data.
@@ -29,3 +33,27 @@ def get(rid: str) -> dict:
     )
     LOGGER.info("room data: %s: %s", rid, ret)
     return ret
+
+
+_CACHE: Dict[str, Tuple[int, dict]] = dict()
+_CACHE_MU = asyncio.locks.Lock()
+
+
+async def get_with_cache(rid: str, *, ttl: float = 3600) -> dict:
+    """Get room data with a ttl cache
+
+    Args:
+        rid (str): room id
+        ttl (float, optional): cache time to live in seconds. Defaults to 3600.
+
+    Returns:
+        dict: room data.
+    """
+    rid = str(rid)
+    async with _CACHE_MU:
+        if (
+            rid not in _CACHE or
+            _CACHE[rid][0] < time.time() - ttl
+        ):
+            _CACHE[rid] = [time.time(), get(rid)]
+    return _CACHE[rid][1]
