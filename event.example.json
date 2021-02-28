@@ -1,41 +1,42 @@
 {
   "VIEW": {
-    "room_display_id": "21919321",
-    "room_real_id": 21919321,
+    "room_display_id": "21307497",
+    "room_real_id": 21307497,
     "type": "VIEW",
     "data": 1
   },
   "INTERACT_WORD": {
-    "room_display_id": "21547895",
-    "room_real_id": 21547895,
+    "room_display_id": "21463247",
+    "room_real_id": 21463247,
     "type": "INTERACT_WORD",
     "data": {
       "cmd": "INTERACT_WORD",
       "data": {
-        "uid": 51410353,
-        "uname": "艾主席゛",
+        "uid": 20622758,
+        "uname": "tom被玩弄于鼓掌之中",
         "uname_color": "",
         "identities": [
+          3,
           1
         ],
         "msg_type": 1,
-        "roomid": 21547895,
-        "timestamp": 1614508823,
-        "score": 1614508823715,
+        "roomid": 21463247,
+        "timestamp": 1614509998,
+        "score": 1614527033231,
         "fans_medal": {
-          "target_id": 28642491,
-          "medal_level": 1,
-          "medal_name": "Lzhang",
-          "medal_color": 6067854,
-          "medal_color_start": 12632256,
-          "medal_color_end": 12632256,
-          "medal_color_border": 12632256,
-          "is_lighted": 0,
+          "target_id": 67793248,
+          "medal_level": 8,
+          "medal_name": "萍老爷",
+          "medal_color": 6126494,
+          "medal_color_start": 6126494,
+          "medal_color_end": 6126494,
+          "medal_color_border": 6126494,
+          "is_lighted": 1,
           "guard_level": 0,
           "special": "",
           "icon_id": 0,
-          "anchor_roomid": 864331,
-          "score": 60
+          "anchor_roomid": 2704817,
+          "score": 7035
         },
         "is_spread": 0,
         "spread_info": "",
@@ -48,8 +49,8 @@
     }
   },
   "SEND_GIFT": {
-    "room_display_id": "21547895",
-    "room_real_id": 21547895,
+    "room_display_id": "21013446",
+    "room_real_id": 21013446,
     "type": "SEND_GIFT",
     "data": {
       "cmd": "SEND_GIFT",
@@ -63,9 +64,9 @@
         "broadcast_id": 0,
         "crit_prob": 0,
         "guard_level": 0,
-        "rcost": 142728391,
-        "uid": 211384,
-        "timestamp": 1614508822,
+        "rcost": 53409205,
+        "uid": 327200325,
+        "timestamp": 1614509995,
         "giftId": 30607,
         "giftType": 5,
         "super": 0,
@@ -77,10 +78,10 @@
         "biz_source": "Live",
         "action": "投喂",
         "coin_type": "silver",
-        "uname": "芙芙不是梅林兽",
-        "face": "http://i2.hdslb.com/bfs/face/2e8d10c088afa5c46b1303a5639059b300c755b5.jpg",
-        "batch_combo_id": "batch:gift:combo_id:211384:441381282:30607:1614508822.5814",
-        "rnd": "1614493398",
+        "uname": "Rhongomyn1ad",
+        "face": "http://i2.hdslb.com/bfs/face/fba3f0b494c3543d660ac49a5db00e7cc2aa69ed.jpg",
+        "batch_combo_id": "batch:gift:combo_id:327200325:387636363:30607:1614509995.5370",
+        "rnd": "1614509983",
         "giftName": "小心心",
         "combo_send": null,
         "batch_combo_send": null,
@@ -91,25 +92,25 @@
         "demarcation": 1,
         "combo_stay_time": 3,
         "combo_total_coin": 1,
-        "tid": "1614508822110400002",
+        "tid": "1614509995110500003",
         "effect_block": 1,
         "is_special_batch": 0,
         "combo_resources_id": 1,
         "magnification": 1,
         "name_color": "",
         "medal_info": {
-          "target_id": 0,
+          "target_id": 18149131,
           "special": "",
           "icon_id": 0,
           "anchor_uname": "",
           "anchor_roomid": 0,
-          "medal_level": 0,
-          "medal_name": "",
-          "medal_color": 0,
-          "medal_color_start": 0,
-          "medal_color_end": 0,
-          "medal_color_border": 0,
-          "is_lighted": 0,
+          "medal_level": 11,
+          "medal_name": "DD骑士",
+          "medal_color": 9272486,
+          "medal_color_start": 9272486,
+          "medal_color_end": 9272486,
+          "medal_color_border": 9272486,
+          "is_lighted": 1,
           "guard_level": 0
         },
         "svga_block": 0
@@ -117,8 +118,8 @@
     }
   },
   "DANMU_MSG": {
-    "room_display_id": "21547895",
-    "room_real_id": 21547895,
+    "room_display_id": "21304638",
+    "room_real_id": 21304638,
     "type": "DANMU_MSG",
     "data": {
       "cmd": "DANMU_MSG",
@@ -127,46 +128,46 @@
           0,
           1,
           25,
-          4546550,
-          1614508823917,
-          207020276,
+          16777215,
+          1614509998967,
+          1614509998,
           0,
-          "29936221",
+          "decf0a7f",
           0,
           0,
-          5,
-          "#1453BAFF,#4C2263A2,#3353BAFF"
+          0,
+          ""
         ],
-        "不行了休息吧",
+        "╮(￣▽￣)╭",
         [
-          313119959,
-          "青空下的黄金妖精",
+          327200325,
+          "Rhongomyn1ad",
           0,
           0,
           0,
           10000,
           1,
-          "#00D1F1"
+          ""
+        ],
+        [
+          11,
+          "DD骑士",
+          "Overidea_China",
+          704808,
+          9272486,
+          "",
+          0,
+          9272486,
+          9272486,
+          9272486,
+          0,
+          1,
+          18149131
         ],
         [
           22,
-          "花丸家",
-          "花丸晴琉Official",
-          21547895,
-          1725515,
-          "",
           0,
-          6809855,
-          1725515,
-          5414290,
-          3,
-          1,
-          441381282
-        ],
-        [
-          12,
-          0,
-          6406234,
+          5805790,
           ">50000",
           0
         ],
@@ -175,11 +176,11 @@
           ""
         ],
         0,
-        3,
+        0,
         null,
         {
-          "ts": 1614508823,
-          "ct": "1336EE1D"
+          "ts": 1614509998,
+          "ct": "D3BE67B0"
         },
         0,
         0,
@@ -196,35 +197,35 @@
     "data": {
       "cmd": "COMBO_SEND",
       "data": {
-        "uid": 13256566,
+        "uid": 95527224,
         "ruid": 198297,
-        "uname": "军服丶姬",
+        "uname": "結城龍乂",
         "r_uname": "进击的冰糖",
-        "combo_num": 23,
+        "combo_num": 5,
         "gift_id": 30607,
         "gift_num": 0,
-        "batch_combo_num": 23,
+        "batch_combo_num": 5,
         "gift_name": "小心心",
         "action": "投喂",
-        "combo_id": "gift:combo_id:13256566:198297:30607:1614508804.7054",
-        "batch_combo_id": "batch:gift:combo_id:13256566:198297:30607:1614508807.1245",
+        "combo_id": "gift:combo_id:95527224:198297:30607:1614509982.4350",
+        "batch_combo_id": "batch:gift:combo_id:95527224:198297:30607:1614509982.4364",
         "is_show": 1,
         "send_master": null,
         "name_color": "",
-        "total_num": 23,
+        "total_num": 5,
         "medal_info": {
-          "target_id": 49631892,
+          "target_id": 198297,
           "special": "",
           "icon_id": 0,
           "anchor_uname": "",
           "anchor_roomid": 0,
-          "medal_level": 11,
-          "medal_name": "月隐人",
-          "medal_color": 9272486,
-          "medal_color_start": 12632256,
-          "medal_color_end": 12632256,
-          "medal_color_border": 12632256,
-          "is_lighted": 0,
+          "medal_level": 6,
+          "medal_name": "糖果铺",
+          "medal_color": 6126494,
+          "medal_color_start": 6126494,
+          "medal_color_end": 6126494,
+          "medal_color_border": 6126494,
+          "is_lighted": 1,
           "guard_level": 0
         },
         "combo_total_coin": 0
@@ -239,15 +240,15 @@
       "cmd": "ENTRY_EFFECT",
       "data": {
         "id": 4,
-        "uid": 41737092,
+        "uid": 20789051,
         "target_id": 198297,
         "mock_effect": 0,
-        "face": "https://i0.hdslb.com/bfs/face/96b7b05f0467c6664cff07c8002a580c4dedd977.jpg",
+        "face": "https://i2.hdslb.com/bfs/face/c373ced029c86304ba717ca03f5199cdc2452892.jpg",
         "privilege_type": 3,
-        "copy_writing": "欢迎舰长 <%早見咲Faki%> 进入直播间",
+        "copy_writing": "欢迎舰长 <%深夜的眼球%> 进入直播间",
         "copy_color": "#ffffff",
         "highlight_color": "#E6FF00",
-        "priority": 70,
+        "priority": 1,
         "basemap_url": "https://i0.hdslb.com/bfs/live/mlive/f34c7441cdbad86f76edebf74e60b59d2958f6ad.png",
         "show_avatar": 1,
         "effective_time": 2,
@@ -256,36 +257,36 @@
         "web_effect_close": 0,
         "web_close_time": 0,
         "business": 1,
-        "copy_writing_v2": "欢迎舰长 <%早見咲Faki%> 进入直播间",
+        "copy_writing_v2": "欢迎舰长 <%深夜的眼球%> 进入直播间",
         "icon_list": [],
         "max_delay_time": 7
       }
     }
   },
   "HOT_RANK_CHANGED": {
-    "room_display_id": "21547895",
-    "room_real_id": 21547895,
+    "room_display_id": "3822389",
+    "room_real_id": 3822389,
     "type": "HOT_RANK_CHANGED",
     "data": {
       "cmd": "HOT_RANK_CHANGED",
       "data": {
-        "rank": 39,
+        "rank": 21,
         "trend": 2,
-        "countdown": 1195,
-        "timestamp": 1614508805,
-        "web_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=2&area_id=9",
-        "live_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=1&area_id=9&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
-        "blink_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=3&area_id=9&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
-        "live_link_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=5&area_id=9&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
-        "pc_link_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=4&is_live_half_webview=1&area_id=9&pc_ui=338,465,f4eefa,0",
-        "icon": "https://i0.hdslb.com/bfs/live/63217712edb588864b2c714225992e7f46b0b917.png",
-        "area_name": "虚拟"
+        "countdown": 10,
+        "timestamp": 1614509990,
+        "web_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=2&area_id=5",
+        "live_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=1&area_id=5&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
+        "blink_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=3&area_id=5&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
+        "live_link_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=5&area_id=5&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
+        "pc_link_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=4&is_live_half_webview=1&area_id=5&pc_ui=338,465,f4eefa,0",
+        "icon": "https://i0.hdslb.com/bfs/live/a04954e4ef72e89a2fae041bf898a0b4a33b884b.png",
+        "area_name": "电台"
       }
     }
   },
   "NOTICE_MSG": {
-    "room_display_id": "4895312",
-    "room_real_id": 4895312,
+    "room_display_id": "1321846",
+    "room_real_id": 1321846,
     "type": "NOTICE_MSG",
     "data": {
       "cmd": "NOTICE_MSG",
@@ -316,11 +317,11 @@
         "highlight": "",
         "border": ""
       },
-      "roomid": 21748664,
-      "real_roomid": 21748664,
-      "msg_common": "<%板塘村小方%>投喂<%清玖bay%>1个小电视飞船，点击前往TA的房间吧！",
-      "msg_self": "<%板塘村小方%>投喂<%清玖bay%>1个小电视飞船，快来围观吧！",
-      "link_url": "https://live.bilibili.com/21748664?from=28003&extra_jump_from=28003&live_lottery_type=1&broadcast_type=1",
+      "roomid": 22731386,
+      "real_roomid": 22731386,
+      "msg_common": "<%Cyw曹三宝%>投喂<%懿轩x%>1个小电视飞船，点击前往TA的房间吧！",
+      "msg_self": "<%Cyw曹三宝%>投喂<%懿轩x%>1个小电视飞船，快来围观吧！",
+      "link_url": "https://live.bilibili.com/22731386?from=28003&extra_jump_from=28003&live_lottery_type=1&broadcast_type=1",
       "msg_type": 2,
       "shield_uid": -1,
       "business_id": "25",
@@ -338,20 +339,20 @@
       "cmd": "ROOM_REAL_TIME_MESSAGE_UPDATE",
       "data": {
         "roomid": 876396,
-        "fans": 784546,
+        "fans": 784557,
         "red_notice": -1,
-        "fans_club": 9627
+        "fans_club": 9674
       }
     }
   },
   "ONLINE_RANK_COUNT": {
-    "room_display_id": "876396",
-    "room_real_id": 876396,
+    "room_display_id": "1321846",
+    "room_real_id": 1321846,
     "type": "ONLINE_RANK_COUNT",
     "data": {
       "cmd": "ONLINE_RANK_COUNT",
       "data": {
-        "count": 16
+        "count": 57
       }
     }
   },
@@ -364,60 +365,60 @@
       "data": {
         "list": [
           {
+            "uid": 92922294,
+            "face": "http://i0.hdslb.com/bfs/face/cec75c592456c421925ea0487fe6cfd772b133c2.jpg",
+            "score": "900",
+            "uname": "窝法的MasterPlan",
+            "rank": 1,
+            "guard_level": 3
+          },
+          {
+            "uid": 85629306,
+            "face": "http://i0.hdslb.com/bfs/face/8f3379c32c8a9dbafa9208ca7e69f32c13fe80d2.jpg",
+            "score": "600",
+            "uname": "呆萌软受",
+            "rank": 2,
+            "guard_level": 2
+          },
+          {
             "uid": 188585663,
             "face": "http://i2.hdslb.com/bfs/face/5a95dcf1b3a639adc0e013b4bf66a48dcbb48326.jpg",
-            "score": "300",
+            "score": "600",
             "uname": "黄昏时酱",
-            "rank": 1,
+            "rank": 3,
             "guard_level": 3
           },
           {
             "uid": 315301133,
             "face": "http://i2.hdslb.com/bfs/face/af9f400cb2a0996e30519bd4db0dc247e7df80ea.jpg",
-            "score": "300",
+            "score": "600",
             "uname": "幽灵DD-",
-            "rank": 2,
+            "rank": 4,
             "guard_level": 3
           },
           {
             "uid": 38574549,
             "face": "http://i0.hdslb.com/bfs/face/1fc7829f2f8cf9b6c96b64eed81d144a2b1207ad.jpg",
-            "score": "300",
+            "score": "580",
             "uname": "咸鱼老豆腐",
-            "rank": 3,
+            "rank": 5,
             "guard_level": 0
           },
           {
-            "uid": 276295638,
-            "face": "http://i0.hdslb.com/bfs/face/1e8b4418cd727ef27426dd248f36a697b0dd2b11.jpg",
-            "score": "300",
-            "uname": "甜甜花酿ヽ花岬粉",
-            "rank": 4,
-            "guard_level": 3
-          },
-          {
-            "uid": 31081983,
-            "face": "http://i2.hdslb.com/bfs/face/b42d5fc89319cabea29b213a07cb9241c55a1316.jpg",
-            "score": "300",
-            "uname": "某咖啡店的蛇",
-            "rank": 5,
-            "guard_level": 3
-          },
-          {
-            "uid": 92922294,
-            "face": "http://i0.hdslb.com/bfs/face/cec75c592456c421925ea0487fe6cfd772b133c2.jpg",
-            "score": "300",
-            "uname": "窝法的MasterPlan",
+            "uid": 1500913,
+            "face": "http://i1.hdslb.com/bfs/face/224e817b2210ff4512304ca461dfab77cb6d722d.jpg",
+            "score": "350",
+            "uname": "小学男生Fnk",
             "rank": 6,
             "guard_level": 3
           },
           {
-            "uid": 152980293,
-            "face": "http://i0.hdslb.com/bfs/face/a2e4548f96bb37913a4742f75423a18b3559a4ef.jpg",
-            "score": "80",
-            "uname": "百慕楠楠楠",
+            "uid": 165889872,
+            "face": "http://i0.hdslb.com/bfs/face/ce3ba4a51419d7f3dfc40545210ca4497758bca9.jpg",
+            "score": "300",
+            "uname": "利兹與青鳥",
             "rank": 7,
-            "guard_level": 0
+            "guard_level": 3
           }
         ],
         "rank_type": "gold-rank"
@@ -425,8 +426,8 @@
     }
   },
   "DISCONNECT": {
-    "room_display_id": "14327465",
-    "room_real_id": 14327465,
+    "room_display_id": "21685677",
+    "room_real_id": 21685677,
     "type": "DISCONNECT",
     "data": 1
   },
@@ -438,11 +439,11 @@
       "cmd": "LIVE_INTERACTIVE_GAME",
       "data": {
         "type": 2,
-        "uname": "わびわび心豚",
+        "uname": "GBSSR",
         "gift_name": "",
         "gift_num": 0,
         "price": 0,
-        "msg": " "
+        "msg": "又看到推幽灵诡计了"
       }
     }
   },
@@ -502,7 +503,7 @@
       "data": {
         "list": [
           {
-            "msg": "恭喜 <%幽灵DD-%> 成为高能榜",
+            "msg": "恭喜 <%呆萌软受%> 成为高能榜",
             "rank": 2
           }
         ]
@@ -516,11 +517,11 @@
     "data": {
       "cmd": "SUPER_CHAT_MESSAGE",
       "data": {
-        "id": 1396762,
-        "uid": 315301133,
+        "id": 1396879,
+        "uid": 1500913,
         "price": 30,
         "rate": 1000,
-        "message": "夜に駆ける冰糖唱的了吗",
+        "message": "室内系的Trackmaker试试？ 有点难度，中文的也可以",
         "trans_mark": 0,
         "is_ranked": 0,
         "message_trans": "",
@@ -533,32 +534,32 @@
         "background_icon": "",
         "background_price_color": "#7497CD",
         "background_bottom_color": "#2A60B2",
-        "ts": 1614508595,
+        "ts": 1614509961,
         "is_send_audit": "0",
-        "token": "F3D6B99C",
+        "token": "E9859EA6",
         "medal_info": {
           "icon_id": 0,
           "target_id": 198297,
           "special": "",
           "anchor_uname": "进击的冰糖",
           "anchor_roomid": 876396,
-          "medal_level": 22,
+          "medal_level": 27,
           "medal_name": "糖果铺",
-          "medal_color": "#1a544b",
-          "medal_color_start": 1725515,
-          "medal_color_end": 5414290,
+          "medal_color": "#6154c",
+          "medal_color_start": 398668,
+          "medal_color_end": 6850801,
           "medal_color_border": 6809855,
           "is_lighted": 1,
           "guard_level": 3
         },
         "user_info": {
-          "uname": "幽灵DD-",
-          "face": "http://i2.hdslb.com/bfs/face/af9f400cb2a0996e30519bd4db0dc247e7df80ea.jpg",
+          "uname": "小学男生Fnk",
+          "face": "http://i1.hdslb.com/bfs/face/224e817b2210ff4512304ca461dfab77cb6d722d.jpg",
           "face_frame": "http://i0.hdslb.com/bfs/live/78e8a800e97403f1137c0c1b5029648c390be390.png",
           "name_color": "#00D1F1",
           "guard_level": 3,
-          "user_level": 14,
-          "level_color": "#61c05a",
+          "user_level": 24,
+          "level_color": "#5896de",
           "is_vip": 0,
           "is_svip": 0,
           "is_main_vip": 1,
@@ -566,8 +567,8 @@
           "manager": 0
         },
         "time": 60,
-        "start_time": 1614508595,
-        "end_time": 1614508655,
+        "start_time": 1614509961,
+        "end_time": 1614510021,
         "gift": {
           "num": 1,
           "gift_id": 12000,
@@ -584,46 +585,46 @@
     "data": {
       "cmd": "SUPER_CHAT_MESSAGE_JPN",
       "data": {
-        "id": "1396762",
-        "uid": "315301133",
+        "id": "1396879",
+        "uid": "1500913",
         "price": 30,
         "rate": 1000,
-        "message": "夜に駆ける冰糖唱的了吗",
-        "message_jpn": "夜に駆ける冰糖唱的了吗",
+        "message": "室内系的Trackmaker试试？ 有点难度，中文的也可以",
+        "message_jpn": "インテリア系のTrackmakerは試してみますか？ちょっと難しいです。中国語でも大丈夫です。",
         "is_ranked": 0,
         "background_image": "https://i0.hdslb.com/bfs/live/a712efa5c6ebc67bafbe8352d3e74b820a00c13e.png",
         "background_color": "#EDF5FF",
         "background_icon": "",
         "background_price_color": "#7497CD",
         "background_bottom_color": "#2A60B2",
-        "ts": 1614508595,
-        "token": "F3D6B99C",
+        "ts": 1614509963,
+        "token": "23FEAEE2",
         "medal_info": {
           "icon_id": 0,
           "target_id": 198297,
           "special": "",
           "anchor_uname": "进击的冰糖",
           "anchor_roomid": 876396,
-          "medal_level": 22,
+          "medal_level": 27,
           "medal_name": "糖果铺",
-          "medal_color": "#1a544b"
+          "medal_color": "#6154c"
         },
         "user_info": {
-          "uname": "幽灵DD-",
-          "face": "http://i2.hdslb.com/bfs/face/af9f400cb2a0996e30519bd4db0dc247e7df80ea.jpg",
+          "uname": "小学男生Fnk",
+          "face": "http://i1.hdslb.com/bfs/face/224e817b2210ff4512304ca461dfab77cb6d722d.jpg",
           "face_frame": "http://i0.hdslb.com/bfs/live/78e8a800e97403f1137c0c1b5029648c390be390.png",
           "guard_level": 3,
-          "user_level": 14,
-          "level_color": "#61c05a",
+          "user_level": 24,
+          "level_color": "#5896de",
           "is_vip": 0,
           "is_svip": 0,
           "is_main_vip": 1,
           "title": "0",
           "manager": 0
         },
-        "time": 60,
-        "start_time": 1614508595,
-        "end_time": 1614508655,
+        "time": 58,
+        "start_time": 1614509961,
+        "end_time": 1614510021,
         "gift": {
           "num": 1,
           "gift_id": 12000,
@@ -695,6 +696,25 @@
         "widget_list": {
           "24": null
         }
+      }
+    }
+  },
+  "HOT_RANK_SETTLEMENT": {
+    "room_display_id": "876396",
+    "room_real_id": 876396,
+    "type": "HOT_RANK_SETTLEMENT",
+    "data": {
+      "cmd": "HOT_RANK_SETTLEMENT",
+      "data": {
+        "rank": 4,
+        "uname": "进击的冰糖",
+        "face": "http://i0.hdslb.com/bfs/face/4648d2d7a6ea25e0a2abe9fe0381da71de0d20e9.jpg",
+        "timestamp": 1614510000,
+        "icon": "https://i0.hdslb.com/bfs/live/63217712edb588864b2c714225992e7f46b0b917.png",
+        "area_name": "虚拟主播",
+        "url": "https://live.bilibili.com/p/html/live-app-hotrank/result.html?is_live_half_webview=1&hybrid_half_ui=1,5,250,200,f4eefa,0,30,0,0,0;2,5,250,200,f4eefa,0,30,0,0,0;3,5,250,200,f4eefa,0,30,0,0,0;4,5,250,200,f4eefa,0,30,0,0,0;5,5,250,200,f4eefa,0,30,0,0,0;6,5,250,200,f4eefa,0,30,0,0,0;7,5,250,200,f4eefa,0,30,0,0,0;8,5,250,200,f4eefa,0,30,0,0,0&areaId=9&cache_key=e5ecdd0384dbae59c6826d10627c1b4c",
+        "cache_key": "e5ecdd0384dbae59c6826d10627c1b4c",
+        "dm_msg": "恭喜主播 <% 进击的冰糖 %> 荣登限时热门榜虚拟主播榜top4! 即将获得热门流量推荐哦！"
       }
     }
   }
