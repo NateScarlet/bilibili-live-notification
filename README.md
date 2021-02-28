@@ -50,7 +50,7 @@
   }
   ```
 
-  变量事件，参见 [bilibili-api 文档](https://github.com/Passkou/bilibili_api/blob/main/docs/%E6%A8%A1%E5%9D%97/live.md#%E4%BA%8B%E4%BB%B6)
+  变量事件，参见 [event.example.json](./event.example.json)
 
 - room:
 

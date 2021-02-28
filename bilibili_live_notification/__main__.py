@@ -1,18 +1,21 @@
 """Send email notification when bilibili live start. """
 import asyncio
+import json
 import logging
 from datetime import datetime, timedelta
 
 from bilibili_api import live
 
-from . import config, emailtools, webhook, room
+from . import config, emailtools, room, webhook
 
 
 def _format_time(v: datetime) -> str:
     return v.strftime("%H:%M:%S %Y-%m-%d")
 
+
 LOGGER = logging.getLogger(__name__)
 LAST_EMAIL_SEND_TIME = {}
+
 
 async def _handle_live(event):
     rid = event["room_display_id"]
@@ -33,14 +36,43 @@ async def _handle_live(event):
     LAST_EMAIL_SEND_TIME[rid] = now
 
 
+EVENT_EXAMPLE = {}
+
+
+def _load_event_example():
+    with open("event.example.json", encoding="utf8") as f:
+        return json.load(f)
+
+
+def _save_event_example():
+    with open("event.example.json", "w", encoding="utf8") as f:
+        json.dump(EVENT_EXAMPLE, f, ensure_ascii=False, indent=2)
+
+
+try:
+    EVENT_EXAMPLE = _load_event_example()
+except OSError:
+    pass
+
+
+def _collect_event_example(event):
+    event_type = event["type"]
+    is_new = event_type not in EVENT_EXAMPLE
+    EVENT_EXAMPLE[event_type] = event
+    if is_new:
+        LOGGER.info(
+            "update ./event.example.json due to new event type: %s", event_type)
+        _save_event_example()
+
+
 async def _handle_event(event):
+    _collect_event_example(event)
     rid = event["room_display_id"]
     event_type = event["type"]
     # update room data cache
     if event_type in ("LIVE", "PREPARING", "ROOM_RANK"):
         await asyncio.sleep(1)  # wait room cover
         room_data = await room.get_with_cache(rid, ttl=0)
-
     if event_type == "LIVE":
         LOGGER.info(event)
         await _handle_live(event)
