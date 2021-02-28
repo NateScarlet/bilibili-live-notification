@@ -31,7 +31,7 @@ def get(rid: str) -> dict:
         url=url,
         data=info,
     )
-    LOGGER.info("room data: %s: %s", rid, ret)
+    LOGGER.debug("room data: %s: %s", rid, ret)
     return ret
 
 
