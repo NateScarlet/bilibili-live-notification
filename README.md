@@ -11,6 +11,7 @@
 - [x] 为每个直播间单独指定邮箱，未指定时使用全局设置
 - [x] 邮件节流，不在短时间内重复发送同一直播间的开播提醒
 - [x] 支持 Webhook （用于配合其他服务，例如使用 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 发送 QQ 消息）
+  - [x] 所有直播间事件都支持 Webhook，不仅限于 LIVE 事件
 
 ## 配置
 
@@ -49,7 +50,7 @@
   }
   ```
 
-  变量事件
+  变量事件，参见 [bilibili-api 文档](https://github.com/Passkou/bilibili_api/blob/main/docs/%E6%A8%A1%E5%9D%97/live.md#%E4%BA%8B%E4%BB%B6)
 
 - room:
 
