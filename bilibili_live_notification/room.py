@@ -35,7 +35,7 @@ def get(rid: str) -> dict:
     return ret
 
 
-_CACHE: Dict[str, Tuple[int, dict]] = dict()
+_CACHE: Dict[str, Tuple[float, dict]] = dict()
 _CACHE_MU = asyncio.locks.Lock()
 
 
