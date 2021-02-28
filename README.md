@@ -12,6 +12,7 @@
 - [x] 邮件节流，不在短时间内重复发送同一直播间的开播提醒
 - [x] 支持 Webhook （用于配合其他服务，例如使用 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 发送 QQ 消息）
   - [x] 所有直播间事件都支持 Webhook，不仅限于 LIVE 事件
+  - [x] 根据条件跳过 Webhook
 
 ## 配置
 

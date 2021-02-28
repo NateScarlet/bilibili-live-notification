@@ -13,6 +13,9 @@ from . import config
 LOGGER = logging.getLogger(__name__)
 
 async def trigger(name: str, data: Optional[dict] = None) -> None:
+    if config.get(f"WEBHOOK_SKIP_{name}", data).lower() == "true":
+        LOGGER.info("webhook skip: %s", name)
+        return 
     LOGGER.info("webhook start: %s", name)
     url = config.get(f"WEBHOOK_URL_{name}", data)
     method = config.get(f"WEBHOOK_METHOD_{name}", data)
