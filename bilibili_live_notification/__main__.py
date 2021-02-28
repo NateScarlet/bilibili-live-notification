@@ -26,6 +26,7 @@ async def _handle_live(event):
         LOGGER.info("email throttled: %s", rid)
         return
 
+    await asyncio.sleep(1) # wait room cover
     room_data = room.get(rid)
 
     await webhook.trigger_many(
