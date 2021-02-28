@@ -2,7 +2,10 @@
 import asyncio
 import json
 import logging
-from datetime import datetime, timedelta
+import os
+import time
+from datetime import datetime
+from typing import Dict, Tuple
 
 from bilibili_api import live
 
@@ -14,27 +17,19 @@ def _format_time(v: datetime) -> str:
 
 
 LOGGER = logging.getLogger(__name__)
-LAST_EMAIL_SEND_TIME = {}
 
 
 async def _handle_live(event):
     rid = event["room_display_id"]
 
-    now = datetime.now()
-    if (rid in LAST_EMAIL_SEND_TIME and
-            LAST_EMAIL_SEND_TIME[rid] > now - timedelta(seconds=config.BILIBILI_EMAIL_THROTTLE)):
-        LOGGER.info("email throttled: %s", rid)
-        return
-
     # TODO: support template for email subject and body
+    now = datetime.now()
     room_data = await room.get_with_cache(rid)
     emailtools.send(
         config.get_room_email_to(rid),
         f'[开播]{room_data["name"]} - {_format_time(now)}',
         f'{room_data["url"]} ',
     )
-    LAST_EMAIL_SEND_TIME[rid] = now
-
 
 EVENT_EXAMPLE = {}
 
@@ -65,10 +60,27 @@ def _collect_event_example(event):
         _save_event_example()
 
 
+ROOM_EVENT_TIME: Dict[Tuple[str, str], float] = {}
+
+
 async def _handle_event(event):
     _collect_event_example(event)
-    rid = event["room_display_id"]
+
     event_type = event["type"]
+    rid = str(event["room_display_id"])
+    event_key = (rid, event_type)
+    if (
+        event_key in ROOM_EVENT_TIME and
+        time.time() - ROOM_EVENT_TIME[event_key] < int(
+            config.get(f"BILIBILI_EVENT_THROTTLE_{event_type}") or "0")
+    ):
+        if event_type == "LIVE":
+            LOGGER.info("event throttled: %s: %s", rid, event_type)
+        else:
+            LOGGER.debug("event throttled: %s: %s", rid, event_type)
+        return
+    ROOM_EVENT_TIME[event_key] = time.time()
+
     # update room data cache
     if event_type in ("LIVE", "PREPARING", "ROOM_RANK"):
         await asyncio.sleep(1)  # wait room cover
@@ -101,6 +113,8 @@ def _iterate_rooms():
 
 
 if __name__ == '__main__':
+    os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
+
     all_logger = [LOGGER, webhook.LOGGER, room.LOGGER]
     handler = logging.StreamHandler()
     handler.setFormatter(logging.Formatter(
