@@ -1,9 +1,9 @@
 {
   "VIEW": {
-    "room_display_id": "21547895",
-    "room_real_id": 21547895,
+    "room_display_id": "593",
+    "room_real_id": 47377,
     "type": "VIEW",
-    "data": 224632
+    "data": 1
   },
   "INTERACT_WORD": {
     "room_display_id": "21547895",
@@ -12,30 +12,31 @@
     "data": {
       "cmd": "INTERACT_WORD",
       "data": {
-        "uid": 10277675,
-        "uname": "隔壁佬黄",
+        "uid": 14545882,
+        "uname": "渲染昀离殇",
         "uname_color": "",
         "identities": [
+          3,
           1
         ],
         "msg_type": 1,
         "roomid": 21547895,
-        "timestamp": 1614504120,
-        "score": 1614504120792,
+        "timestamp": 1614506802,
+        "score": 1614524965493,
         "fans_medal": {
-          "target_id": 12305396,
-          "medal_level": 3,
-          "medal_name": "聖所",
-          "medal_color": 6067854,
-          "medal_color_start": 12632256,
-          "medal_color_end": 12632256,
-          "medal_color_border": 12632256,
-          "is_lighted": 0,
+          "target_id": 375504219,
+          "medal_level": 9,
+          "medal_name": "湊阿夸",
+          "medal_color": 9272486,
+          "medal_color_start": 9272486,
+          "medal_color_end": 9272486,
+          "medal_color_border": 9272486,
+          "is_lighted": 1,
           "guard_level": 0,
           "special": "",
           "icon_id": 0,
-          "anchor_roomid": 511060,
-          "score": 914
+          "anchor_roomid": 14917277,
+          "score": 8163
         },
         "is_spread": 0,
         "spread_info": "",
@@ -63,35 +64,35 @@
         "broadcast_id": 0,
         "crit_prob": 0,
         "guard_level": 0,
-        "rcost": 142721118,
-        "uid": 19723662,
-        "timestamp": 1614504119,
+        "rcost": 142726565,
+        "uid": 277351705,
+        "timestamp": 1614506801,
         "giftId": 30607,
         "giftType": 5,
         "super": 0,
-        "super_gift_num": 4,
-        "super_batch_gift_num": 4,
-        "remain": 8,
+        "super_gift_num": 1,
+        "super_batch_gift_num": 1,
+        "remain": 0,
         "price": 0,
         "beatId": "",
         "biz_source": "Live",
         "action": "投喂",
         "coin_type": "silver",
-        "uname": "橘子是憨憨呐",
-        "face": "http://i1.hdslb.com/bfs/face/75969c68f27b2628d02f0030381b1de96cbd8158.jpg",
-        "batch_combo_id": "batch:gift:combo_id:19723662:441381282:30607:1614504119.2747",
-        "rnd": "976554248",
+        "uname": "饕餮颦",
+        "face": "http://i1.hdslb.com/bfs/face/7f8227f940376feafc4207750289106d07996c32.jpg",
+        "batch_combo_id": "batch:gift:combo_id:277351705:441381282:30607:1614506801.2552",
+        "rnd": "765ABB44-6C86-4441-9581-55ECFE610672",
         "giftName": "小心心",
         "combo_send": null,
         "batch_combo_send": null,
         "tag_image": "",
         "top_list": null,
         "send_master": null,
-        "is_first": false,
+        "is_first": true,
         "demarcation": 1,
         "combo_stay_time": 3,
         "combo_total_coin": 1,
-        "tid": "1614504119120200006",
+        "tid": "1614506801130500001",
         "effect_block": 1,
         "is_special_batch": 0,
         "combo_resources_id": 1,
@@ -103,12 +104,12 @@
           "icon_id": 0,
           "anchor_uname": "",
           "anchor_roomid": 0,
-          "medal_level": 22,
+          "medal_level": 9,
           "medal_name": "花丸家",
-          "medal_color": 1725515,
-          "medal_color_start": 1725515,
-          "medal_color_end": 5414290,
-          "medal_color_border": 1725515,
+          "medal_color": 9272486,
+          "medal_color_start": 9272486,
+          "medal_color_end": 9272486,
+          "medal_color_border": 9272486,
           "is_lighted": 1,
           "guard_level": 0
         },
@@ -127,20 +128,20 @@
           0,
           1,
           25,
-          16750592,
-          1614504121758,
-          -699846189,
+          5566168,
+          1614506803947,
+          1276694940,
           0,
-          "6f314fb1",
+          "d7e2e8ae",
           0,
           0,
           0,
           ""
         ],
-        "草",
+        "片哥这么多号？",
         [
-          8000357,
-          "曉-civilion",
+          353266610,
+          "青野萌香_",
           0,
           0,
           0,
@@ -149,24 +150,24 @@
           ""
         ],
         [
-          19,
+          14,
           "花丸家",
           "花丸晴琉Official",
           21547895,
-          13081892,
+          12478086,
           "",
           0,
-          13081892,
-          13081892,
-          13081892,
+          12478086,
+          12478086,
+          12478086,
           0,
           1,
           441381282
         ],
         [
-          34,
+          20,
           0,
-          10512625,
+          6406234,
           ">50000",
           0
         ],
@@ -178,8 +179,8 @@
         0,
         null,
         {
-          "ts": 1614504121,
-          "ct": "3F116FD9"
+          "ts": 1614506803,
+          "ct": "A53ACDCE"
         },
         0,
         0,
@@ -196,29 +197,29 @@
     "data": {
       "cmd": "COMBO_SEND",
       "data": {
-        "uid": 262440876,
+        "uid": 17672198,
         "ruid": 441381282,
-        "uname": "_Harmonia_",
+        "uname": "CONSULTANT丿",
         "r_uname": "花丸晴琉Official",
-        "combo_num": 4,
+        "combo_num": 2,
         "gift_id": 30607,
         "gift_num": 0,
-        "batch_combo_num": 4,
+        "batch_combo_num": 2,
         "gift_name": "小心心",
         "action": "投喂",
-        "combo_id": "gift:combo_id:262440876:441381282:30607:1614504104.4592",
-        "batch_combo_id": "batch:gift:combo_id:262440876:441381282:30607:1614504104.4598",
+        "combo_id": "gift:combo_id:17672198:441381282:30607:1614506791.0654",
+        "batch_combo_id": "batch:gift:combo_id:17672198:441381282:30607:1614506791.0661",
         "is_show": 1,
         "send_master": null,
         "name_color": "",
-        "total_num": 4,
+        "total_num": 2,
         "medal_info": {
           "target_id": 441381282,
           "special": "",
           "icon_id": 0,
           "anchor_uname": "",
           "anchor_roomid": 0,
-          "medal_level": 12,
+          "medal_level": 11,
           "medal_name": "花丸家",
           "medal_color": 9272486,
           "medal_color_start": 9272486,
@@ -232,22 +233,22 @@
     }
   },
   "ENTRY_EFFECT": {
-    "room_display_id": "21547895",
-    "room_real_id": 21547895,
+    "room_display_id": "21449083",
+    "room_real_id": 21449083,
     "type": "ENTRY_EFFECT",
     "data": {
       "cmd": "ENTRY_EFFECT",
       "data": {
         "id": 4,
-        "uid": 313119959,
-        "target_id": 441381282,
+        "uid": 86382806,
+        "target_id": 434565011,
         "mock_effect": 0,
-        "face": "https://i0.hdslb.com/bfs/face/79b06167cf638354431fcc99bdbb84e464551f64.jpg",
+        "face": "https://i2.hdslb.com/bfs/face/6805f6858bb6d62b414f649e329add43e14142b7.jpg",
         "privilege_type": 3,
-        "copy_writing": "欢迎舰长 <%青空下的黄金妖...%> 进入直播间",
+        "copy_writing": "欢迎舰长 <%幼夜Night%> 进入直播间",
         "copy_color": "#ffffff",
         "highlight_color": "#E6FF00",
-        "priority": 1,
+        "priority": 70,
         "basemap_url": "https://i0.hdslb.com/bfs/live/mlive/f34c7441cdbad86f76edebf74e60b59d2958f6ad.png",
         "show_avatar": 1,
         "effective_time": 2,
@@ -256,7 +257,7 @@
         "web_effect_close": 0,
         "web_close_time": 0,
         "business": 1,
-        "copy_writing_v2": "欢迎舰长 <%青空下的黄金…%> 进入直播间",
+        "copy_writing_v2": "欢迎舰长 <%幼夜Night%> 进入直播间",
         "icon_list": [],
         "max_delay_time": 7
       }
@@ -269,10 +270,10 @@
     "data": {
       "cmd": "HOT_RANK_CHANGED",
       "data": {
-        "rank": 31,
+        "rank": 14,
         "trend": 2,
-        "countdown": 480,
-        "timestamp": 1614504120,
+        "countdown": 1425,
+        "timestamp": 1614506775,
         "web_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=2&area_id=9",
         "live_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=1&area_id=9&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
         "blink_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=3&area_id=9&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
@@ -284,8 +285,8 @@
     }
   },
   "NOTICE_MSG": {
-    "room_display_id": "21547895",
-    "room_real_id": 21547895,
+    "room_display_id": "3822389",
+    "room_real_id": 3822389,
     "type": "NOTICE_MSG",
     "data": {
       "cmd": "NOTICE_MSG",
@@ -316,11 +317,11 @@
         "highlight": "",
         "border": ""
       },
-      "roomid": 22769116,
-      "real_roomid": 22769116,
-      "msg_common": "<%纠结的名%>投喂<%球球乌%>1个小电视飞船，点击前往TA的房间吧！",
-      "msg_self": "<%纠结的名%>投喂<%球球乌%>1个小电视飞船，快来围观吧！",
-      "link_url": "https://live.bilibili.com/22769116?from=28003&extra_jump_from=28003&live_lottery_type=1&broadcast_type=1",
+      "roomid": 22877024,
+      "real_roomid": 22877024,
+      "msg_common": "<%飞而飘%>投喂<%海盐甜莓Moon%>1个小电视飞船，点击前往TA的房间吧！",
+      "msg_self": "<%飞而飘%>投喂<%海盐甜莓Moon%>1个小电视飞船，快来围观吧！",
+      "link_url": "https://live.bilibili.com/22877024?from=28003&extra_jump_from=28003&live_lottery_type=1&broadcast_type=1",
       "msg_type": 2,
       "shield_uid": -1,
       "business_id": "25",
@@ -338,20 +339,20 @@
       "cmd": "ROOM_REAL_TIME_MESSAGE_UPDATE",
       "data": {
         "roomid": 21547895,
-        "fans": 383584,
+        "fans": 383671,
         "red_notice": -1,
-        "fans_club": 5566
+        "fans_club": 5701
       }
     }
   },
   "ONLINE_RANK_COUNT": {
-    "room_display_id": "21547895",
-    "room_real_id": 21547895,
+    "room_display_id": "876396",
+    "room_real_id": 876396,
     "type": "ONLINE_RANK_COUNT",
     "data": {
       "cmd": "ONLINE_RANK_COUNT",
       "data": {
-        "count": 22
+        "count": 321
       }
     }
   },
@@ -364,19 +365,11 @@
       "data": {
         "list": [
           {
-            "uid": 27985546,
-            "face": "http://i2.hdslb.com/bfs/face/a63fe6348a0aaf4c67fc4e40ac9e8db30b5bea75.jpg",
-            "score": "9114",
-            "uname": "lemecy",
+            "uid": 260398,
+            "face": "http://i1.hdslb.com/bfs/face/f4dc3f957bd9c55526c5727c27846afdac029b29.jpg",
+            "score": "1000",
+            "uname": "るか_2wink提款机",
             "rank": 1,
-            "guard_level": 2
-          },
-          {
-            "uid": 131247162,
-            "face": "http://i1.hdslb.com/bfs/face/ece836138dd0daefde3d7b7f44e6057bae366213.jpg",
-            "score": "1392",
-            "uname": "时上空",
-            "rank": 2,
             "guard_level": 3
           },
           {
@@ -384,7 +377,7 @@
             "face": "http://i1.hdslb.com/bfs/face/149d5714075e0dd619a0aa6f962396838e4d7e7f.jpg",
             "score": "800",
             "uname": "繁华落梦尽凄凉",
-            "rank": 3,
+            "rank": 2,
             "guard_level": 3
           },
           {
@@ -392,15 +385,7 @@
             "face": "http://i2.hdslb.com/bfs/face/259cf3395fb12916ed2419eb583c6ecce5fade5b.jpg",
             "score": "500",
             "uname": "一古井止水一",
-            "rank": 4,
-            "guard_level": 3
-          },
-          {
-            "uid": 617612,
-            "face": "http://i2.hdslb.com/bfs/face/3b7c39b46925370a1d4eacb3ef1c7f800254746c.jpg",
-            "score": "500",
-            "uname": "出门遇萝莉",
-            "rank": 5,
+            "rank": 3,
             "guard_level": 3
           },
           {
@@ -408,20 +393,288 @@
             "face": "http://i1.hdslb.com/bfs/face/6c6ce495f8976703e0fa5ccb2b292981b3cd189a.jpg",
             "score": "302",
             "uname": "lixyy_",
-            "rank": 6,
+            "rank": 4,
             "guard_level": 3
+          },
+          {
+            "uid": 5793985,
+            "face": "http://i1.hdslb.com/bfs/face/7c0efc504224d7f07110ae74f211f081f39b2606.jpg",
+            "score": "300",
+            "uname": "アンジュ・カトリーナ",
+            "rank": 5,
+            "guard_level": 0
           },
           {
             "uid": 10343349,
             "face": "http://i1.hdslb.com/bfs/face/a24f140e5f789663da54577ec6bede2b1709f23e.jpg",
             "score": "300",
             "uname": "羽奈真瑠有栖",
-            "rank": 7,
+            "rank": 6,
             "guard_level": 0
+          },
+          {
+            "uid": 7730771,
+            "face": "http://i1.hdslb.com/bfs/face/f01270d6d52a2cb712a349d2b4a6efa1885c9521.jpg",
+            "score": "300",
+            "uname": "渊灬袁",
+            "rank": 7,
+            "guard_level": 3
           }
         ],
         "rank_type": "gold-rank"
       }
+    }
+  },
+  "DISCONNECT": {
+    "room_display_id": "12235923",
+    "room_real_id": 12235923,
+    "type": "DISCONNECT",
+    "data": 1
+  },
+  "LIVE_INTERACTIVE_GAME": {
+    "room_display_id": "1017",
+    "room_real_id": 1017,
+    "type": "LIVE_INTERACTIVE_GAME",
+    "data": {
+      "cmd": "LIVE_INTERACTIVE_GAME",
+      "data": {
+        "type": 2,
+        "uname": "JOJO爱吃煎饼果子",
+        "gift_name": "",
+        "gift_num": 0,
+        "price": 0,
+        "msg": "溜走"
+      }
+    }
+  },
+  "GUARD_BUY": {
+    "room_display_id": "1017",
+    "room_real_id": 1017,
+    "type": "GUARD_BUY",
+    "data": {
+      "cmd": "GUARD_BUY",
+      "data": {
+        "uid": 12297254,
+        "username": "kanngyou",
+        "guard_level": 3,
+        "num": 1,
+        "price": 198000,
+        "gift_id": 10003,
+        "gift_name": "舰长",
+        "start_time": 1614506402,
+        "end_time": 1614506402
+      }
+    }
+  },
+  "USER_TOAST_MSG": {
+    "room_display_id": "1017",
+    "room_real_id": 1017,
+    "type": "USER_TOAST_MSG",
+    "data": {
+      "cmd": "USER_TOAST_MSG",
+      "data": {
+        "op_type": 3,
+        "uid": 12297254,
+        "username": "kanngyou",
+        "guard_level": 3,
+        "is_show": 0,
+        "anchor_show": true,
+        "user_show": true,
+        "toast_msg": "<%kanngyou%> 自动续费了舰长",
+        "num": 1,
+        "price": 138000,
+        "role_name": "舰长",
+        "unit": "月",
+        "start_time": 1614506402,
+        "end_time": 1614506402,
+        "target_guard_count": 1571,
+        "color": "#00D1F1",
+        "payflow_id": "2102281800001612572546072",
+        "svga_block": 0
+      }
+    }
+  },
+  "ONLINE_RANK_TOP3": {
+    "room_display_id": "21547895",
+    "room_real_id": 21547895,
+    "type": "ONLINE_RANK_TOP3",
+    "data": {
+      "cmd": "ONLINE_RANK_TOP3",
+      "data": {
+        "list": [
+          {
+            "msg": "恭喜 <%ぱぱっぱかぱれるん%> 成为高能榜",
+            "rank": 2
+          }
+        ]
+      }
+    }
+  },
+  "SUPER_CHAT_MESSAGE": {
+    "room_display_id": "21547895",
+    "room_real_id": 21547895,
+    "type": "SUPER_CHAT_MESSAGE",
+    "data": {
+      "cmd": "SUPER_CHAT_MESSAGE",
+      "data": {
+        "id": 1396596,
+        "uid": 504911149,
+        "price": 50,
+        "rate": 1000,
+        "message": "ぱれるん壺オジ上手上手！",
+        "trans_mark": 0,
+        "is_ranked": 1,
+        "message_trans": "",
+        "background_color_start": "#4EA4C5",
+        "background_color_end": "#29718B",
+        "color_point": 0.7,
+        "message_font_color": "#A3F6FF",
+        "background_image": "https://i0.hdslb.com/bfs/live/a712efa5c6ebc67bafbe8352d3e74b820a00c13e.png",
+        "background_color": "#DBFFFD",
+        "background_icon": "",
+        "background_price_color": "#7DA4BD",
+        "background_bottom_color": "#427D9E",
+        "ts": 1614506513,
+        "is_send_audit": "0",
+        "token": "EB9B32A",
+        "medal_info": {
+          "icon_id": 0,
+          "target_id": 441381282,
+          "special": "",
+          "anchor_uname": "花丸晴琉Official",
+          "anchor_roomid": 21547895,
+          "medal_level": 9,
+          "medal_name": "花丸家",
+          "medal_color": "#8d7ca6",
+          "medal_color_start": 9272486,
+          "medal_color_end": 9272486,
+          "medal_color_border": 9272486,
+          "is_lighted": 1,
+          "guard_level": 0
+        },
+        "user_info": {
+          "uname": "ぱぱっぱかぱれるん",
+          "face": "http://i0.hdslb.com/bfs/face/member/noface.jpg",
+          "face_frame": "",
+          "name_color": "#666666",
+          "guard_level": 0,
+          "user_level": 17,
+          "level_color": "#61c05a",
+          "is_vip": 0,
+          "is_svip": 0,
+          "is_main_vip": 0,
+          "title": "0",
+          "manager": 0
+        },
+        "time": 119,
+        "start_time": 1614506512,
+        "end_time": 1614506632,
+        "gift": {
+          "num": 1,
+          "gift_id": 12000,
+          "gift_name": "醒目留言"
+        }
+      },
+      "roomid": "21547895"
+    }
+  },
+  "SUPER_CHAT_MESSAGE_JPN": {
+    "room_display_id": "21547895",
+    "room_real_id": 21547895,
+    "type": "SUPER_CHAT_MESSAGE_JPN",
+    "data": {
+      "cmd": "SUPER_CHAT_MESSAGE_JPN",
+      "data": {
+        "id": "1396596",
+        "uid": "504911149",
+        "price": 50,
+        "rate": 1000,
+        "message": "ぱれるん壺オジ上手上手！",
+        "message_jpn": "ぱれるん壺オジ上手上手！",
+        "is_ranked": 1,
+        "background_image": "https://i0.hdslb.com/bfs/live/a712efa5c6ebc67bafbe8352d3e74b820a00c13e.png",
+        "background_color": "#DBFFFD",
+        "background_icon": "",
+        "background_price_color": "#7DA4BD",
+        "background_bottom_color": "#427D9E",
+        "ts": 1614506513,
+        "token": "EB9B32A",
+        "medal_info": {
+          "icon_id": 0,
+          "target_id": 441381282,
+          "special": "",
+          "anchor_uname": "花丸晴琉Official",
+          "anchor_roomid": 21547895,
+          "medal_level": 9,
+          "medal_name": "花丸家",
+          "medal_color": "#8d7ca6"
+        },
+        "user_info": {
+          "uname": "ぱぱっぱかぱれるん",
+          "face": "http://i0.hdslb.com/bfs/face/member/noface.jpg",
+          "face_frame": "",
+          "guard_level": 0,
+          "user_level": 17,
+          "level_color": "#61c05a",
+          "is_vip": 0,
+          "is_svip": 0,
+          "is_main_vip": 0,
+          "title": "0",
+          "manager": 0
+        },
+        "time": 119,
+        "start_time": 1614506512,
+        "end_time": 1614506632,
+        "gift": {
+          "num": 1,
+          "gift_id": 12000,
+          "gift_name": "醒目留言"
+        }
+      },
+      "roomid": "21547895"
+    }
+  },
+  "ROOM_BLOCK_MSG": {
+    "room_display_id": "21547895",
+    "room_real_id": 21547895,
+    "type": "ROOM_BLOCK_MSG",
+    "data": {
+      "cmd": "ROOM_BLOCK_MSG",
+      "uid": 1711866748,
+      "uname": "gjfwe5073cfj",
+      "data": {
+        "uid": 1711866748,
+        "uname": "gjfwe5073cfj",
+        "operator": 1
+      }
+    }
+  },
+  "ROOM_CHANGE": {
+    "room_display_id": "876396",
+    "room_real_id": 876396,
+    "type": "ROOM_CHANGE",
+    "data": {
+      "cmd": "ROOM_CHANGE",
+      "data": {
+        "title": "B站清楚地带",
+        "area_id": 371,
+        "parent_area_id": 9,
+        "area_name": "虚拟主播",
+        "parent_area_name": "虚拟主播",
+        "live_key": "0",
+        "sub_session_key": ""
+      }
+    }
+  },
+  "LIVE": {
+    "room_display_id": "876396",
+    "room_real_id": 876396,
+    "type": "LIVE",
+    "data": {
+      "cmd": "LIVE",
+      "live_key": "125973765909471084",
+      "sub_session_key": "125973765909471084sub_time:1614506803",
+      "roomid": 876396
     }
   }
 }
