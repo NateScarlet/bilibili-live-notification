@@ -111,11 +111,7 @@ def _iterate_rooms():
         room1.on("ALL")(_handle_event)
         yield room1
 
-
-if __name__ == '__main__':
-    os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
-
-    all_logger = [LOGGER, webhook.LOGGER, room.LOGGER]
+async def main():
     handler = logging.StreamHandler()
     handler.setFormatter(logging.Formatter(
         "%(levelname)-6s[%(asctime)s]:%(name)s:%(lineno)d: %(message)s",
@@ -130,9 +126,7 @@ if __name__ == '__main__':
         )
         logger.addHandler(handler)
 
-    asyncio.get_event_loop().run_until_complete(
-        webhook.trigger_many(config.get_csv("SERVER_START_WEBHOOK")),
-    )
+    await webhook.trigger_many(config.get_csv("SERVER_START_WEBHOOK"))
     if config.TEST_EMAIL_TO:
         LOGGER.info('发送测试邮件')
         emailtools.send(
@@ -140,5 +134,10 @@ if __name__ == '__main__':
             f'[启动] - {_format_time(datetime.now())}',
             '服务启动测试邮件',
         )
-    live.connect_all_LiveDanmaku(*_iterate_rooms())
+    await asyncio.gather(*(i.connect(True) for i in _iterate_rooms()))
     LOGGER.info('未配置要监控的直播间，请查看 README.md')
+
+
+if __name__ == '__main__':
+    os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
+    asyncio.run(main())
