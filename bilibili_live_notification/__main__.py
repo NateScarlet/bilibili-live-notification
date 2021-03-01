@@ -9,7 +9,7 @@ from typing import Dict, Tuple
 
 from bilibili_api import live
 
-from . import config, emailtools, room, webhook
+from . import config, emailtools, room, webhook, rate_limit
 
 
 def _format_time(v: datetime) -> str:
@@ -111,7 +111,12 @@ def _iterate_rooms():
         room1.on("ALL")(_handle_event)
         yield room1
 
+
 async def main():
+    os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
+    rate_limit.BILIBILI_API.set(rate_limit.RateLimiter(50, 1))
+    room.CACHE_MU.set(asyncio.Lock())
+
     handler = logging.StreamHandler()
     handler.setFormatter(logging.Formatter(
         "%(levelname)-6s[%(asctime)s]:%(name)s:%(lineno)d: %(message)s",
@@ -139,5 +144,4 @@ async def main():
 
 
 if __name__ == '__main__':
-    os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
     asyncio.run(main())
