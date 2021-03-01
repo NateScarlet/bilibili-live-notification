@@ -94,7 +94,7 @@ async def _handle_event(event):
     room_data = await room.get_with_cache(rid)
     await webhook.trigger_many(
         (
-            config.get_csv(f"BILIBILI_ROOM_WEBHOOK_{event_type}_{rid}") or
+            config.get_csv(f"BILIBILI_ROOM_WEBHOOK_{rid}_{event_type}") or
             config.get_csv(f"BILIBILI_WEBHOOK_{event_type}")
         ),
         {
