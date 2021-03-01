@@ -133,7 +133,7 @@ async def main():
         )
         logger.addHandler(handler)
 
-    await webhook.trigger_many(config.get_csv("SERVER_START_WEBHOOK"))
+    await webhook.trigger_many(config.get_csv("SERVER_WEBHOOK_START"))
     if config.TEST_EMAIL_TO:
         LOGGER.info('发送测试邮件')
         emailtools.send(
