@@ -83,7 +83,7 @@ async def _handle_event(event):
 
     # update room data cache
     if event_type in ("LIVE", "PREPARING", "ROOM_CHANGE"):
-        await asyncio.sleep(1)  # wait room cover
+        await asyncio.sleep(10)  # wait room cover
         room_data = await room.get_with_cache(rid, ttl=0)
     if event_type == "LIVE":
         LOGGER.info(event)
