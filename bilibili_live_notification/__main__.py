@@ -11,6 +11,8 @@ from bilibili_api import live
 
 from . import config, emailtools, room, webhook, rate_limit
 
+from collections import defaultdict, OrderedDict
+
 
 def _format_time(v: datetime) -> str:
     return v.strftime("%H:%M:%S %Y-%m-%d")
@@ -63,25 +65,60 @@ def _collect_event_example(event):
 ROOM_EVENT_TIME: Dict[Tuple[str, str], float] = {}
 
 
+def _throttle_event(event) -> bool:
+    event_type = event["type"]
+    rid = str(event["room_display_id"])
+    event_time_key = (rid, event_type)
+    if (
+        event_time_key in ROOM_EVENT_TIME and
+        time.time() - ROOM_EVENT_TIME[event_time_key] < int(
+            config.get(f"BILIBILI_EVENT_THROTTLE_{event_type}") or "0")
+    ):
+        LOGGER.info("event throttled: %s: %s", rid, event_type)
+        return True
+    ROOM_EVENT_TIME[event_time_key] = time.time()
+    return False
+
+
+ROOM_EVENT_TYPE_KEYS = defaultdict(lambda: defaultdict(OrderedDict))
+
+
+def _distinct_event(event, data: dict) -> bool:
+    event_type = event["type"]
+    rid = str(event["room_display_id"])
+    key = config.get(f"BILIBILI_EVENT_DISTINCT_KEY_{event_type}", data)
+    if key == "":
+        return
+    event_keys = ROOM_EVENT_TYPE_KEYS[rid][event_type]
+    if key in event_keys:
+        LOGGER.info(
+            "skip duplicated event: %s: %s: %s",
+            rid,
+            event_type,
+            key,
+        )
+        return True
+
+    event_keys[key] = True
+    limit = int(
+        config.get(f"BILIBILI_EVENT_DISTINCT_LIMIT_{event_type}", data) or
+        "128",
+    )
+    while len(event_keys) > limit >= 0:
+        event_keys.popitem(last=False)
+
+    return False
+
+
 async def _handle_event(event):
     _collect_event_example(event)
 
-    event_type = event["type"]
-    rid = str(event["room_display_id"])
-    event_key = (rid, event_type)
-    if (
-        event_key in ROOM_EVENT_TIME and
-        time.time() - ROOM_EVENT_TIME[event_key] < int(
-            config.get(f"BILIBILI_EVENT_THROTTLE_{event_type}") or "0")
-    ):
-        if event_type == "LIVE":
-            LOGGER.info("event throttled: %s: %s", rid, event_type)
-        else:
-            LOGGER.debug("event throttled: %s: %s", rid, event_type)
+    if _throttle_event(event):
         return
-    ROOM_EVENT_TIME[event_key] = time.time()
 
     # update room data cache
+    event_type = event["type"]
+    rid = str(event["room_display_id"])
     if event_type in ("LIVE", "PREPARING", "ROOM_CHANGE"):
         await asyncio.sleep(10)  # wait room cover
         room_data = await room.get_with_cache(rid, ttl=0)
@@ -92,18 +129,23 @@ async def _handle_event(event):
         LOGGER.debug(event)
 
     room_data = await room.get_with_cache(rid)
+    data = {
+        **dict(
+            event=event,
+            room=room_data,
+        ),
+        **dict(config.get_items(f"BILIBILI_ROOM_TEMPLATE_VAR_{rid}_")),
+    }
+
+    if _distinct_event(event, data):
+        return
+
     await webhook.trigger_many(
         (
             config.get_csv(f"BILIBILI_ROOM_WEBHOOK_{rid}_{event_type}") or
             config.get_csv(f"BILIBILI_WEBHOOK_{event_type}")
         ),
-        {
-            **dict(
-                event=event,
-                room=room_data,
-            ),
-            **dict(config.get_items(f"BILIBILI_ROOM_TEMPLATE_VAR_{rid}_")),
-        },
+        data,
     )
 
 

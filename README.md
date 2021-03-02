@@ -9,6 +9,7 @@
 - [x] 同时监控多个直播间
 - [x] 开播时给所有指定的邮箱发送邮件
 - [x] 事件节流，时间段内同一直播间内的同类型事件只处理一次。
+- [x] 事件去重，通过事件生成 key ，同房间相同 key 的事件不重复处理。
 - [x] 支持 Webhook （用于配合其他服务，例如使用 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 发送 QQ 消息，使用 Discord 官方 API 发送 Discord 消息）
   - [x] 所有直播间事件都支持 Webhook，不仅限于 LIVE 事件
   - [x] 根据条件跳过 Webhook
