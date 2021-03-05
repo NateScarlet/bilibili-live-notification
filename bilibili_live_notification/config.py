@@ -1,13 +1,14 @@
 """application config. """
 import os
-from typing import Iterator
+from datetime import datetime
+from typing import Iterator, Optional, Tuple
+
 import jinja2
 
-from datetime import datetime
-from typing import Optional, Tuple
 
 class _ChainableDebugUndefined(jinja2.ChainableUndefined, jinja2.DebugUndefined):
     pass
+
 
 def get(name: str, data: Optional[dict] = None) -> str:
     """get string config
@@ -29,7 +30,7 @@ def get(name: str, data: Optional[dict] = None) -> str:
         undefined=_ChainableDebugUndefined,
     ).render(
         **{
-            **dict(now=datetime.now()),
+            **dict(datetime=datetime),
             **dict(get_items(var_prefix, data)),
             **(data or {}),
         },
@@ -47,6 +48,7 @@ def parse_csv(v: Optional[str]) -> list:
     """
     return [i for i in (v or '').split(",") if i]
 
+
 def get_csv(name: str, data: Optional[dict] = None) -> list:
     """get csv config
 
@@ -58,6 +60,7 @@ def get_csv(name: str, data: Optional[dict] = None) -> list:
         list: values
     """
     return parse_csv(get(name, data))
+
 
 def get_items(prefix: str, data: Optional[dict] = None) -> Iterator[Tuple[str, str]]:
     """get room id from env vars that has BILIBILI_ROOM_NAME_ prefix

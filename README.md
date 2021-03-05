@@ -35,9 +35,9 @@
 
 全局模版变量值：
 
-- now: datetime.datetime
+- datetime: type(datetime.datetime)
 
-  当前时间
+  datetime 模块
 
 开播提醒：
 
