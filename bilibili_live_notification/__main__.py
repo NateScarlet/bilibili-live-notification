@@ -33,6 +33,11 @@ async def _handle_live(event):
         f'{room_data["url"]} ',
     )
 
+
+async def _handle_view(event):
+    rid = event["room_display_id"]
+    room.ROOM_POPUPARITY[rid] = event["data"]
+
 EVENT_EXAMPLE = {}
 
 
@@ -111,22 +116,28 @@ def _distinct_event(event, data: dict) -> bool:
 
 
 async def _handle_event(event):
+    event_type = event["type"]
+    rid = str(event["room_display_id"])
+
+    if event_type == "LIVE":
+        LOGGER.info(event)
+    else:
+        LOGGER.debug(event)
+
     _collect_event_example(event)
 
     if _throttle_event(event):
         return
 
     # update room data cache
-    event_type = event["type"]
-    rid = str(event["room_display_id"])
     if event_type in ("LIVE", "PREPARING", "ROOM_CHANGE"):
         await asyncio.sleep(10)  # wait room cover
         room_data = await room.get_with_cache(rid, ttl=0)
+
     if event_type == "LIVE":
-        LOGGER.info(event)
         await _handle_live(event)
-    else:
-        LOGGER.debug(event)
+    elif event_type == "VIEW":
+        await _handle_view(event)
 
     room_data = await room.get_with_cache(rid)
     data = {

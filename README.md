@@ -61,6 +61,8 @@
       name: string,
       title: string,
       url: string,
+      /** 人气值 实时更新 */
+      popularity: number,
       data: unknown,
   }
   ```
