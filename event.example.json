@@ -1,32 +1,32 @@
 {
   "VIEW": {
-    "room_display_id": "21463219",
-    "room_real_id": 21463219,
+    "room_display_id": "21320551",
+    "room_real_id": 21320551,
     "type": "VIEW",
-    "data": 1
+    "data": 116050
   },
   "INTERACT_WORD": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "INTERACT_WORD",
     "data": {
       "cmd": "INTERACT_WORD",
       "data": {
-        "uid": 156673427,
-        "uname": "入魂一发",
+        "uid": 8348685,
+        "uname": "周而复始棋洛无悔",
         "uname_color": "",
         "identities": [
           3,
           1
         ],
         "msg_type": 1,
-        "roomid": 22347045,
-        "timestamp": 1614743998,
-        "score": 1614803537245,
+        "roomid": 1017,
+        "timestamp": 1616760119,
+        "score": 1616837258028,
         "fans_medal": {
-          "target_id": 623441609,
-          "medal_level": 14,
-          "medal_name": "天妇罗",
+          "target_id": 168598,
+          "medal_level": 15,
+          "medal_name": "刺儿",
           "medal_color": 12478086,
           "medal_color_start": 12478086,
           "medal_color_end": 12478086,
@@ -35,8 +35,8 @@
           "guard_level": 0,
           "special": "",
           "icon_id": 0,
-          "anchor_roomid": 22347045,
-          "score": 49539
+          "anchor_roomid": 1017,
+          "score": 67139
         },
         "is_spread": 0,
         "spread_info": "",
@@ -49,8 +49,8 @@
     }
   },
   "SEND_GIFT": {
-    "room_display_id": "593",
-    "room_real_id": 47377,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "SEND_GIFT",
     "data": {
       "cmd": "SEND_GIFT",
@@ -58,19 +58,19 @@
         "draw": 0,
         "gold": 0,
         "silver": 0,
-        "num": 19,
+        "num": 24,
         "total_coin": 0,
         "effect": 0,
         "broadcast_id": 0,
         "crit_prob": 0,
         "guard_level": 0,
-        "rcost": 359875696,
-        "uid": 152430238,
-        "timestamp": 1614743996,
+        "rcost": 1132235947,
+        "uid": 40332505,
+        "timestamp": 1616760118,
         "giftId": 30607,
         "giftType": 5,
         "super": 0,
-        "super_gift_num": 19,
+        "super_gift_num": 24,
         "super_batch_gift_num": 1,
         "remain": 0,
         "price": 0,
@@ -78,11 +78,12 @@
         "biz_source": "Live",
         "action": "投喂",
         "coin_type": "silver",
-        "uname": "北风垂燕",
-        "face": "http://i1.hdslb.com/bfs/face/2a795be26efbc3744d3a7375d4612d71a9c5569e.jpg",
-        "batch_combo_id": "batch:gift:combo_id:152430238:282994:30607:1614743996.9408",
-        "rnd": "305067472",
+        "uname": "Air李00",
+        "face": "http://i1.hdslb.com/bfs/face/98ae11def7a2c3a688eb25843978a4dff8d8563e.jpg",
+        "batch_combo_id": "batch:gift:combo_id:40332505:168598:30607:1616760118.8119",
+        "rnd": "41555410",
         "giftName": "小心心",
+        "original_gift_name": "",
         "combo_send": null,
         "batch_combo_send": null,
         "tag_image": "",
@@ -92,20 +93,20 @@
         "demarcation": 1,
         "combo_stay_time": 3,
         "combo_total_coin": 1,
-        "tid": "1614743996120800001",
+        "tid": "1616760118120500005",
         "effect_block": 1,
         "is_special_batch": 0,
         "combo_resources_id": 1,
         "magnification": 1,
         "name_color": "",
         "medal_info": {
-          "target_id": 282994,
+          "target_id": 168598,
           "special": "",
-          "icon_id": 0,
+          "icon_id": 1000006,
           "anchor_uname": "",
           "anchor_roomid": 0,
           "medal_level": 17,
-          "medal_name": "鸟蛋",
+          "medal_name": "刺儿",
           "medal_color": 13081892,
           "medal_color_start": 13081892,
           "medal_color_end": 13081892,
@@ -113,13 +114,14 @@
           "is_lighted": 1,
           "guard_level": 0
         },
-        "svga_block": 0
+        "svga_block": 0,
+        "blind_gift": null
       }
     }
   },
   "DANMU_MSG": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "21415012",
+    "room_real_id": 21415012,
     "type": "DANMU_MSG",
     "data": {
       "cmd": "DANMU_MSG",
@@ -129,19 +131,19 @@
           1,
           25,
           5566168,
-          1614743997911,
-          1614743440,
+          1616760119924,
+          1616757538,
           0,
-          "fa5b5cbd",
+          "de457e1b",
           0,
           0,
           0,
           ""
         ],
-        "老板大可不必",
+        "草",
         [
-          6034957,
-          "咕咕的白老鸽",
+          8571051,
+          "旧忆绘梦",
           0,
           0,
           0,
@@ -150,24 +152,24 @@
           ""
         ],
         [
-          5,
-          "天妇罗",
-          "凤玲天天Official",
-          22347045,
-          6126494,
+          11,
+          "POMAE",
+          "白百合リリィOfficial",
+          21415012,
+          9272486,
           "",
           0,
-          6126494,
-          6126494,
-          6126494,
+          9272486,
+          9272486,
+          9272486,
           0,
           1,
-          623441609
+          421347849
         ],
         [
-          7,
+          20,
           0,
-          9868950,
+          6406234,
           ">50000",
           0
         ],
@@ -179,8 +181,8 @@
         0,
         null,
         {
-          "ts": 1614743997,
-          "ct": "3B00A1CD"
+          "ts": 1616760119,
+          "ct": "3AD2549F"
         },
         0,
         0,
@@ -191,41 +193,41 @@
     }
   },
   "COMBO_SEND": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "593",
+    "room_real_id": 47377,
     "type": "COMBO_SEND",
     "data": {
       "cmd": "COMBO_SEND",
       "data": {
-        "uid": 13721727,
-        "ruid": 623441609,
-        "uname": "Delier_4355",
-        "r_uname": "凤玲天天Official",
-        "combo_num": 7,
+        "uid": 434345227,
+        "ruid": 282994,
+        "uname": "达波尔霍尔兹",
+        "r_uname": "泠鸢yousa",
+        "combo_num": 18,
         "gift_id": 30607,
         "gift_num": 0,
-        "batch_combo_num": 7,
+        "batch_combo_num": 18,
         "gift_name": "小心心",
         "action": "投喂",
-        "combo_id": "gift:combo_id:13721727:623441609:30607:1614743983.1276",
-        "batch_combo_id": "batch:gift:combo_id:13721727:623441609:30607:1614743983.1282",
+        "combo_id": "gift:combo_id:434345227:282994:30607:1616760107.1720",
+        "batch_combo_id": "batch:gift:combo_id:434345227:282994:30607:1616760107.1729",
         "is_show": 1,
         "send_master": null,
         "name_color": "",
-        "total_num": 7,
+        "total_num": 18,
         "medal_info": {
-          "target_id": 623441609,
+          "target_id": 282994,
           "special": "",
           "icon_id": 0,
           "anchor_uname": "",
           "anchor_roomid": 0,
-          "medal_level": 3,
-          "medal_name": "天妇罗",
-          "medal_color": 6067854,
-          "medal_color_start": 6067854,
-          "medal_color_end": 6067854,
-          "medal_color_border": 6067854,
-          "is_lighted": 1,
+          "medal_level": 10,
+          "medal_name": "鸟蛋",
+          "medal_color": 9272486,
+          "medal_color_start": 12632256,
+          "medal_color_end": 12632256,
+          "medal_color_border": 12632256,
+          "is_lighted": 0,
           "guard_level": 0
         },
         "combo_total_coin": 0
@@ -233,19 +235,19 @@
     }
   },
   "ENTRY_EFFECT": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "21396545",
+    "room_real_id": 21396545,
     "type": "ENTRY_EFFECT",
     "data": {
       "cmd": "ENTRY_EFFECT",
       "data": {
         "id": 4,
-        "uid": 24258,
-        "target_id": 623441609,
+        "uid": 1307706,
+        "target_id": 407106379,
         "mock_effect": 0,
-        "face": "https://i1.hdslb.com/bfs/face/caa92e0d0e63251024557aea8cc7179a4727d8d5.jpg",
+        "face": "https://i1.hdslb.com/bfs/face/3e994c807ab42e563a4170f4d90f1310b4b604b5.jpg",
         "privilege_type": 3,
-        "copy_writing": "欢迎舰长 <%红翼莲华%> 进入直播间",
+        "copy_writing": "欢迎舰长 <%吾乃利刃100...%> 进入直播间",
         "copy_color": "#ffffff",
         "highlight_color": "#E6FF00",
         "priority": 1,
@@ -257,55 +259,57 @@
         "web_effect_close": 0,
         "web_close_time": 0,
         "business": 1,
-        "copy_writing_v2": "欢迎舰长 <%红翼莲华%> 进入直播间",
+        "copy_writing_v2": "欢迎舰长 <%吾乃利刃10…%> 进入直播间",
         "icon_list": [],
         "max_delay_time": 7
       }
     }
   },
   "HOT_RANK_CHANGED": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "21919321",
+    "room_real_id": 21919321,
     "type": "HOT_RANK_CHANGED",
     "data": {
       "cmd": "HOT_RANK_CHANGED",
       "data": {
-        "rank": 9,
+        "rank": 19,
         "trend": 1,
-        "countdown": 10,
-        "timestamp": 1614743990,
-        "web_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=2&area_id=5",
-        "live_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=1&area_id=5&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
-        "blink_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=3&area_id=5&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
-        "live_link_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=5&area_id=5&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
-        "pc_link_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=4&is_live_half_webview=1&area_id=5&pc_ui=338,465,f4eefa,0",
-        "icon": "https://i0.hdslb.com/bfs/live/a04954e4ef72e89a2fae041bf898a0b4a33b884b.png",
-        "area_name": "电台"
+        "countdown": 1680,
+        "timestamp": 1616760120,
+        "web_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=2&area_id=9",
+        "live_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=1&area_id=9&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
+        "blink_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=3&area_id=9&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
+        "live_link_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=5&area_id=9&is_live_half_webview=1&hybrid_rotate_d=1&is_cling_player=1&hybrid_half_ui=1,3,100p,70p,f4eefa,0,30,100,0,0;2,2,375,100p,f4eefa,0,30,100,0,0;3,3,100p,70p,f4eefa,0,30,100,0,0;4,2,375,100p,f4eefa,0,30,100,0,0;5,3,100p,70p,f4eefa,0,30,100,0,0;6,3,100p,70p,f4eefa,0,30,100,0,0;7,3,100p,70p,f4eefa,0,30,100,0,0;8,3,100p,70p,f4eefa,0,30,100,0,0",
+        "pc_link_url": "https://live.bilibili.com/p/html/live-app-hotrank/index.html?clientType=4&is_live_half_webview=1&area_id=9&pc_ui=338,465,f4eefa,0",
+        "icon": "https://i0.hdslb.com/bfs/live/63217712edb588864b2c714225992e7f46b0b917.png",
+        "area_name": "虚拟"
       }
     }
   },
   "NOTICE_MSG": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "21463219",
+    "room_real_id": 21463219,
     "type": "NOTICE_MSG",
     "data": {
       "cmd": "NOTICE_MSG",
+      "id": 1,
+      "name": "全区道具抽奖广播样式",
       "full": {
-        "head_icon": "http://i0.hdslb.com/bfs/live/00f26756182b2e9d06c00af23001bc8e10da67d0.webp",
+        "head_icon": "http://i0.hdslb.com/bfs/live/b29add66421580c3e680d784a827202e512a40a0.webp",
         "tail_icon": "http://i0.hdslb.com/bfs/live/822da481fdaba986d738db5d8fd469ffa95a8fa1.webp",
-        "head_icon_fa": "http://i0.hdslb.com/bfs/live/77983005023dc3f31cd599b637c83a764c842f87.png",
+        "head_icon_fa": "http://i0.hdslb.com/bfs/live/49869a52d6225a3e70bbf1f4da63f199a95384b2.png",
         "tail_icon_fa": "http://i0.hdslb.com/bfs/live/38cb2a9f1209b16c0f15162b0b553e3b28d9f16f.png",
-        "head_icon_fan": 36,
+        "head_icon_fan": 24,
         "tail_icon_fan": 4,
-        "background": "#6098FFFF",
+        "background": "#66A74EFF",
         "color": "#FFFFFFFF",
         "highlight": "#FDFF2FFF",
         "time": 20
       },
       "half": {
-        "head_icon": "http://i0.hdslb.com/bfs/live/358cc52e974b315e83eee429858de4fee97a1ef5.png",
+        "head_icon": "http://i0.hdslb.com/bfs/live/ec9b374caec5bd84898f3780a10189be96b86d4e.png",
         "tail_icon": "",
-        "background": "#7BB6F2FF",
+        "background": "#85B971FF",
         "color": "#FFFFFFFF",
         "highlight": "#FDFF2FFF",
         "time": 15
@@ -317,14 +321,14 @@
         "highlight": "",
         "border": ""
       },
-      "roomid": 22863364,
-      "real_roomid": 22863364,
-      "msg_common": "<%偶很拉风%>投喂:<%这里是晚晚啊%>1个摩天大楼，点击前往TA的房间吧！",
-      "msg_self": "<%偶很拉风%>投喂:<%这里是晚晚啊%>1个摩天大楼，快来吧！",
-      "link_url": "https://live.bilibili.com/22863364?accept_quality=%5B4%5D&broadcast_type=0&current_qn=10000&current_quality=10000&extra_jump_from=28003&from=28003&is_room_feed=1&live_lottery_type=1&p2p_type=0&playurl_h264=http%3A%2F%2Fd1--cn-gotcha05.bilivideo.com%2Flive-bvc%2F471961%2Flive_696877773_77576636.flv%3Fcdn%3Dcn-gotcha05%26expires%3D1614747105%26len%3D0%26oi%3D0%26pt%3D%26qn%3D10000%26trid%3Dd60800b7dd35463d96b58d1dced1f829%26sigparams%3Dcdn%2Cexpires%2Clen%2Coi%2Cpt%2Cqn%2Ctrid%26sign%3D215d8ac730cccdd31e11aa1b9492bb64%26ptype%3D0%26src%3D8%26sl%3D1%26order%3D1&playurl_h265=&quality_description=%5B%7B%22qn%22%3A10000%2C%22desc%22%3A%22%E5%8E%9F%E7%94%BB%22%7D%5D",
+      "roomid": 22758804,
+      "real_roomid": 22758804,
+      "msg_common": "<%娇气-a%>投喂<%一个逸z%>1个小电视飞船，点击前往TA的房间吧！",
+      "msg_self": "<%娇气-a%>投喂<%一个逸z%>1个小电视飞船，快来围观吧！",
+      "link_url": "https://live.bilibili.com/22758804?accept_quality=%5B10000%5D&broadcast_type=0&current_qn=10000&current_quality=10000&extra_jump_from=28003&from=28003&is_room_feed=1&live_lottery_type=1&live_play_network=other&p2p_type=0&playurl_h264=http%3A%2F%2Fd1--ov-gotcha04.bilivideo.com%2Flive-bvc%2F698522%2Flive_1971041661_58314427.flv%3Fexpires%3D1616763686%26len%3D0%26oi%3D0%26pt%3D%26qn%3D150%26trid%3Dde95336a67ee42e7b86628501d334d79%26sigparams%3Dcdn%2Cexpires%2Clen%2Coi%2Cpt%2Cqn%2Ctrid%26cdn%3Dov-gotcha04%26sign%3Dedfcdb5007f741c5bf20dcdf89725fba%26p2p_type%3D0%26src%3D8%26sl%3D1%26sk%3D87af7c4a512d23a&playurl_h265=&quality_description=%5B%7B%22qn%22%3A10000%2C%22desc%22%3A%22%E5%8E%9F%E7%94%BB%22%7D%5D",
       "msg_type": 2,
       "shield_uid": -1,
-      "business_id": "20003",
+      "business_id": "25",
       "scatter": {
         "min": 0,
         "max": 0
@@ -332,93 +336,93 @@
     }
   },
   "ROOM_REAL_TIME_MESSAGE_UPDATE": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "21919321",
+    "room_real_id": 21919321,
     "type": "ROOM_REAL_TIME_MESSAGE_UPDATE",
     "data": {
       "cmd": "ROOM_REAL_TIME_MESSAGE_UPDATE",
       "data": {
-        "roomid": 22347045,
-        "fans": 102039,
+        "roomid": 21919321,
+        "fans": 387181,
         "red_notice": -1,
-        "fans_club": 2198
+        "fans_club": 2318
       }
     }
   },
   "ONLINE_RANK_COUNT": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "3822389",
+    "room_real_id": 3822389,
     "type": "ONLINE_RANK_COUNT",
     "data": {
       "cmd": "ONLINE_RANK_COUNT",
       "data": {
-        "count": 13
+        "count": 21
       }
     }
   },
   "ONLINE_RANK_V2": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "3822389",
+    "room_real_id": 3822389,
     "type": "ONLINE_RANK_V2",
     "data": {
       "cmd": "ONLINE_RANK_V2",
       "data": {
         "list": [
           {
-            "uid": 550458515,
-            "face": "http://i2.hdslb.com/bfs/face/f27a4d3493ad95d5ced124e8193bccc9a9e5d6b9.jpg",
-            "score": "9180",
-            "uname": "MisakaMikoto白井黑子",
+            "uid": 7813049,
+            "face": "http://i2.hdslb.com/bfs/face/88ca1ae50a0f5fbc98840d76ef538206ba38f418.jpg",
+            "score": "3600",
+            "uname": "夜晚里的晴歌",
             "rank": 1,
             "guard_level": 3
           },
           {
-            "uid": 10183614,
-            "face": "http://i0.hdslb.com/bfs/face/member/noface.jpg",
-            "score": "800",
-            "uname": "hakuna2",
+            "uid": 2149006,
+            "face": "http://i1.hdslb.com/bfs/face/697cfc5d87d3191d75628e703420fb68cab609eb.jpg",
+            "score": "1380",
+            "uname": "-NEETKaguya-",
             "rank": 2,
             "guard_level": 3
           },
           {
-            "uid": 374633575,
-            "face": "http://i1.hdslb.com/bfs/face/d2892af74a785605c1c191899918df5a918d66bf.jpg",
-            "score": "600",
-            "uname": "猫猫别这样",
+            "uid": 432055588,
+            "face": "http://i0.hdslb.com/bfs/face/9692bb83db9049a3206e20356b5407bd4f594884.jpg",
+            "score": "1380",
+            "uname": "平凡普通追番党",
             "rank": 3,
-            "guard_level": 0
+            "guard_level": 3
           },
           {
-            "uid": 5113643,
-            "face": "http://i1.hdslb.com/bfs/face/3a8d2726e5ad535f346f77ecc076a881465b0eaa.jpg",
-            "score": "399",
-            "uname": "奥利给medicine",
+            "uid": 435320,
+            "face": "http://i0.hdslb.com/bfs/face/03bcd14d925de080644331e6e2c498ea8e8850f4.jpg",
+            "score": "1380",
+            "uname": "鹰仓杏铃Hibiki",
             "rank": 4,
-            "guard_level": 0
+            "guard_level": 3
           },
           {
-            "uid": 95089878,
-            "face": "http://i0.hdslb.com/bfs/face/7420208d8cca918bf1afda62b7c0bb65b957a03f.jpg",
-            "score": "300",
-            "uname": "梦梦子Official",
+            "uid": 1415000,
+            "face": "http://i1.hdslb.com/bfs/face/23346bb5cd494d2c6cead1f830490c996dfeb95d.jpg",
+            "score": "1380",
+            "uname": "淡蓝色的回忆",
             "rank": 5,
             "guard_level": 3
           },
           {
-            "uid": 13721727,
-            "face": "http://i0.hdslb.com/bfs/face/08900fe5439bb89c00c19ce94dc3f5b0b7392b05.jpg",
-            "score": "100",
-            "uname": "Delier_4355",
+            "uid": 9751119,
+            "face": "http://i0.hdslb.com/bfs/face/6f3ab129004a2705635a959561b121dc9ab4cad2.jpg",
+            "score": "1380",
+            "uname": "致郁LF",
             "rank": 6,
-            "guard_level": 0
+            "guard_level": 3
           },
           {
-            "uid": 579955194,
-            "face": "http://i0.hdslb.com/bfs/face/9b1d695a5eaec935ca0f65ba08bd98cead3f016e.jpg",
-            "score": "100",
-            "uname": "吃东坡肉的李白",
+            "uid": 263106,
+            "face": "http://i1.hdslb.com/bfs/face/a34240b2a6984243fbdac73b83350df90f1e693a.jpg",
+            "score": "800",
+            "uname": "Bocchi_the_rock",
             "rank": 7,
-            "guard_level": 0
+            "guard_level": 3
           }
         ],
         "rank_type": "gold-rank"
@@ -439,91 +443,91 @@
       "cmd": "LIVE_INTERACTIVE_GAME",
       "data": {
         "type": 2,
-        "uname": "李泽言小老婆",
+        "uname": "世間為上",
         "gift_name": "",
         "gift_num": 0,
         "price": 0,
-        "msg": "2333"
+        "msg": "大家晚上好"
       }
     }
   },
   "GUARD_BUY": {
-    "room_display_id": "21665984",
-    "room_real_id": 21665984,
+    "room_display_id": "21415012",
+    "room_real_id": 21415012,
     "type": "GUARD_BUY",
     "data": {
       "cmd": "GUARD_BUY",
       "data": {
-        "uid": 36434715,
-        "username": "比那名居剑子ぐ",
+        "uid": 59805095,
+        "username": "七懒古月木兆official",
         "guard_level": 3,
         "num": 1,
         "price": 198000,
         "gift_id": 10003,
         "gift_name": "舰长",
-        "start_time": 1614741748,
-        "end_time": 1614741748
+        "start_time": 1616759573,
+        "end_time": 1616759573
       }
     }
   },
   "USER_TOAST_MSG": {
-    "room_display_id": "21665984",
-    "room_real_id": 21665984,
+    "room_display_id": "21415012",
+    "room_real_id": 21415012,
     "type": "USER_TOAST_MSG",
     "data": {
       "cmd": "USER_TOAST_MSG",
       "data": {
-        "op_type": 1,
-        "uid": 36434715,
-        "username": "比那名居剑子ぐ",
+        "op_type": 3,
+        "uid": 59805095,
+        "username": "七懒古月木兆official",
         "guard_level": 3,
         "is_show": 0,
         "anchor_show": true,
         "user_show": true,
-        "toast_msg": "<%比那名居剑子ぐ%> 开通了舰长",
+        "toast_msg": "<%七懒古月木兆official%> 自动续费了舰长",
         "num": 1,
-        "price": 198000,
+        "price": 138000,
         "role_name": "舰长",
         "unit": "月",
-        "start_time": 1614741748,
-        "end_time": 1614741748,
-        "target_guard_count": 36,
+        "start_time": 1616759573,
+        "end_time": 1616759573,
+        "target_guard_count": 62,
         "color": "#00D1F1",
-        "payflow_id": "2103031122120562147155665",
+        "payflow_id": "2103261952437072150956176",
         "svga_block": 0
       }
     }
   },
   "ONLINE_RANK_TOP3": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "21919321",
+    "room_real_id": 21919321,
     "type": "ONLINE_RANK_TOP3",
     "data": {
       "cmd": "ONLINE_RANK_TOP3",
       "data": {
         "list": [
           {
-            "msg": "恭喜 <%hakuna2%> 成为高能榜",
-            "rank": 2
+            "msg": "恭喜 <%乐-藏%> 成为高能榜",
+            "rank": 1
           }
         ]
       }
     }
   },
   "SUPER_CHAT_MESSAGE": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "SUPER_CHAT_MESSAGE",
     "data": {
       "cmd": "SUPER_CHAT_MESSAGE",
       "data": {
-        "id": 1411433,
-        "uid": 10183614,
+        "id": 1515451,
+        "uid": 23736427,
         "price": 30,
         "rate": 1000,
-        "message": "来人呐！把朕放锅里煮了给天天吃！",
+        "message": "从七点等散老师到现在终于等到啦，散老师和刺儿们晚上好！",
         "trans_mark": 0,
-        "is_ranked": 1,
+        "is_ranked": 0,
         "message_trans": "",
         "background_color_start": "#3171D2",
         "background_color_end": "#405D85",
@@ -534,32 +538,32 @@
         "background_icon": "",
         "background_price_color": "#7497CD",
         "background_bottom_color": "#2A60B2",
-        "ts": 1614743985,
+        "ts": 1616760072,
         "is_send_audit": "0",
-        "token": "4D9356A",
+        "token": "F453017F",
         "medal_info": {
-          "icon_id": 0,
-          "target_id": 623441609,
+          "icon_id": 1000006,
+          "target_id": 168598,
           "special": "",
-          "anchor_uname": "凤玲天天Official",
-          "anchor_roomid": 22347045,
-          "medal_level": 24,
-          "medal_name": "天妇罗",
-          "medal_color": "#1a544b",
-          "medal_color_start": 1725515,
-          "medal_color_end": 5414290,
-          "medal_color_border": 6809855,
+          "anchor_uname": "逍遥散人",
+          "anchor_roomid": 1017,
+          "medal_level": 8,
+          "medal_name": "刺儿",
+          "medal_color": "#5d7b9e",
+          "medal_color_start": 6126494,
+          "medal_color_end": 6126494,
+          "medal_color_border": 6126494,
           "is_lighted": 1,
-          "guard_level": 3
+          "guard_level": 0
         },
         "user_info": {
-          "uname": "hakuna2",
-          "face": "http://i0.hdslb.com/bfs/face/member/noface.jpg",
-          "face_frame": "http://i0.hdslb.com/bfs/live/78e8a800e97403f1137c0c1b5029648c390be390.png",
-          "name_color": "#00D1F1",
-          "guard_level": 3,
-          "user_level": 14,
-          "level_color": "#61c05a",
+          "uname": "山南水北ovo",
+          "face": "http://i1.hdslb.com/bfs/face/6701e70ea79820f6366c5919aca03cfbe20e67f7.jpg",
+          "face_frame": "",
+          "name_color": "#666666",
+          "guard_level": 0,
+          "user_level": 4,
+          "level_color": "#969696",
           "is_vip": 0,
           "is_svip": 0,
           "is_main_vip": 1,
@@ -567,55 +571,55 @@
           "manager": 0
         },
         "time": 60,
-        "start_time": 1614743985,
-        "end_time": 1614744045,
+        "start_time": 1616760072,
+        "end_time": 1616760132,
         "gift": {
           "num": 1,
           "gift_id": 12000,
           "gift_name": "醒目留言"
         }
       },
-      "roomid": "22347045"
+      "roomid": "1017"
     }
   },
   "SUPER_CHAT_MESSAGE_JPN": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "SUPER_CHAT_MESSAGE_JPN",
     "data": {
       "cmd": "SUPER_CHAT_MESSAGE_JPN",
       "data": {
-        "id": "1411433",
-        "uid": "10183614",
+        "id": "1515451",
+        "uid": "23736427",
         "price": 30,
         "rate": 1000,
-        "message": "来人呐！把朕放锅里煮了给天天吃！",
+        "message": "从七点等散老师到现在终于等到啦，散老师和刺儿们晚上好！",
         "message_jpn": "",
-        "is_ranked": 1,
+        "is_ranked": 0,
         "background_image": "https://i0.hdslb.com/bfs/live/a712efa5c6ebc67bafbe8352d3e74b820a00c13e.png",
         "background_color": "#EDF5FF",
         "background_icon": "",
         "background_price_color": "#7497CD",
         "background_bottom_color": "#2A60B2",
-        "ts": 1614743986,
-        "token": "81EB279E",
+        "ts": 1616760073,
+        "token": "AE50A1B0",
         "medal_info": {
-          "icon_id": 0,
-          "target_id": 623441609,
+          "icon_id": 1000006,
+          "target_id": 168598,
           "special": "",
-          "anchor_uname": "凤玲天天Official",
-          "anchor_roomid": 22347045,
-          "medal_level": 24,
-          "medal_name": "天妇罗",
-          "medal_color": "#1a544b"
+          "anchor_uname": "逍遥散人",
+          "anchor_roomid": 1017,
+          "medal_level": 8,
+          "medal_name": "刺儿",
+          "medal_color": "#5d7b9e"
         },
         "user_info": {
-          "uname": "hakuna2",
-          "face": "http://i0.hdslb.com/bfs/face/member/noface.jpg",
-          "face_frame": "http://i0.hdslb.com/bfs/live/78e8a800e97403f1137c0c1b5029648c390be390.png",
-          "guard_level": 3,
-          "user_level": 14,
-          "level_color": "#61c05a",
+          "uname": "山南水北ovo",
+          "face": "http://i1.hdslb.com/bfs/face/6701e70ea79820f6366c5919aca03cfbe20e67f7.jpg",
+          "face_frame": "",
+          "guard_level": 0,
+          "user_level": 4,
+          "level_color": "#969696",
           "is_vip": 0,
           "is_svip": 0,
           "is_main_vip": 1,
@@ -623,143 +627,146 @@
           "manager": 0
         },
         "time": 59,
-        "start_time": 1614743985,
-        "end_time": 1614744045,
+        "start_time": 1616760072,
+        "end_time": 1616760132,
         "gift": {
           "num": 1,
           "gift_id": 12000,
           "gift_name": "醒目留言"
         }
       },
-      "roomid": "22347045"
+      "roomid": "1017"
     }
   },
   "ROOM_BLOCK_MSG": {
-    "room_display_id": "593",
-    "room_real_id": 47377,
+    "room_display_id": "21685677",
+    "room_real_id": 21685677,
     "type": "ROOM_BLOCK_MSG",
     "data": {
       "cmd": "ROOM_BLOCK_MSG",
-      "uid": 1259433323,
-      "uname": "bili_94042114878",
+      "uid": "11927551",
+      "uname": "丨儒雅随和丨",
       "data": {
-        "uid": 1259433323,
-        "uname": "bili_94042114878",
+        "uid": 11927551,
+        "uname": "丨儒雅随和丨",
         "operator": 1
       }
     }
   },
   "ROOM_CHANGE": {
-    "room_display_id": "21320551",
-    "room_real_id": 21320551,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "ROOM_CHANGE",
     "data": {
       "cmd": "ROOM_CHANGE",
       "data": {
-        "title": "【B限】中文歌学唱［大海］",
-        "area_id": 371,
-        "parent_area_id": 9,
-        "area_name": "虚拟主播",
-        "parent_area_name": "虚拟主播",
-        "live_key": "0",
-        "sub_session_key": ""
+        "title": "可爱像素新游 坎公骑冠剑",
+        "area_id": 235,
+        "parent_area_id": 6,
+        "area_name": "其他单机",
+        "parent_area_name": "单机游戏",
+        "live_key": "132711959710663673",
+        "sub_session_key": "132711959710663673sub_time:1616759921"
       }
     }
   },
   "LIVE": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "21547895",
+    "room_real_id": 21547895,
     "type": "LIVE",
     "data": {
       "cmd": "LIVE",
-      "roomid": 22347045
+      "live_key": "142424405501856631",
+      "sub_session_key": "142424405501856631sub_time:1616760105",
+      "live_platform": "pc",
+      "live_model": 0,
+      "roomid": 21547895
     }
   },
   "PREPARING": {
-    "room_display_id": "21396545",
-    "room_real_id": 21396545,
+    "room_display_id": "21463219",
+    "room_real_id": 21463219,
     "type": "PREPARING",
     "data": {
       "cmd": "PREPARING",
-      "round": 1,
-      "roomid": "21396545"
+      "roomid": "21463219"
     }
   },
   "WIDGET_BANNER": {
-    "room_display_id": "4634167",
-    "room_real_id": 4634167,
+    "room_display_id": "1321846",
+    "room_real_id": 1321846,
     "type": "WIDGET_BANNER",
     "data": {
       "cmd": "WIDGET_BANNER",
       "data": {
-        "timestamp": 1614508825,
+        "timestamp": 1616752205,
         "widget_list": {
-          "24": null
+          "32": null
         }
       }
     }
   },
   "HOT_RANK_SETTLEMENT": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "12235923",
+    "room_real_id": 12235923,
     "type": "HOT_RANK_SETTLEMENT",
     "data": {
       "cmd": "HOT_RANK_SETTLEMENT",
       "data": {
         "rank": 9,
-        "uname": "凤玲天天Official",
-        "face": "http://i0.hdslb.com/bfs/face/2dcbfc44c91b4c2fa1281aee4aea983226f82024.jpg",
-        "timestamp": 1614744000,
-        "icon": "https://i0.hdslb.com/bfs/live/a04954e4ef72e89a2fae041bf898a0b4a33b884b.png",
-        "area_name": "电台",
-        "url": "https://live.bilibili.com/p/html/live-app-hotrank/result.html?is_live_half_webview=1&hybrid_half_ui=1,5,250,200,f4eefa,0,30,0,0,0;2,5,250,200,f4eefa,0,30,0,0,0;3,5,250,200,f4eefa,0,30,0,0,0;4,5,250,200,f4eefa,0,30,0,0,0;5,5,250,200,f4eefa,0,30,0,0,0;6,5,250,200,f4eefa,0,30,0,0,0;7,5,250,200,f4eefa,0,30,0,0,0;8,5,250,200,f4eefa,0,30,0,0,0&areaId=5&cache_key=a5395ed46f324ce52331e66686d9ba55",
-        "cache_key": "a5395ed46f324ce52331e66686d9ba55",
-        "dm_msg": "恭喜主播 <% 凤玲天天Official %> 荣登限时热门榜电台榜top9! 即将获得热门流量推荐哦！"
+        "uname": "神楽Mea_Official",
+        "face": "http://i2.hdslb.com/bfs/face/54d113501f56b165f03ebc96965c43bed57b6bc3.jpg",
+        "timestamp": 1616756400,
+        "icon": "https://i0.hdslb.com/bfs/live/63217712edb588864b2c714225992e7f46b0b917.png",
+        "area_name": "虚拟主播",
+        "url": "https://live.bilibili.com/p/html/live-app-hotrank/result.html?is_live_half_webview=1&hybrid_half_ui=1,5,250,200,f4eefa,0,30,0,0,0;2,5,250,200,f4eefa,0,30,0,0,0;3,5,250,200,f4eefa,0,30,0,0,0;4,5,250,200,f4eefa,0,30,0,0,0;5,5,250,200,f4eefa,0,30,0,0,0;6,5,250,200,f4eefa,0,30,0,0,0;7,5,250,200,f4eefa,0,30,0,0,0;8,5,250,200,f4eefa,0,30,0,0,0&areaId=9&cache_key=6101bbffc144aaf320bbbaf965bfb585",
+        "cache_key": "6101bbffc144aaf320bbbaf965bfb585",
+        "dm_msg": "恭喜主播 <% 神楽Mea_Official %> 荣登限时热门榜虚拟主播榜top9! 即将获得热门流量推荐哦！"
       }
     }
   },
   "ANCHOR_LOT_CHECKSTATUS": {
-    "room_display_id": "21919321",
-    "room_real_id": 21919321,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "ANCHOR_LOT_CHECKSTATUS",
     "data": {
       "cmd": "ANCHOR_LOT_CHECKSTATUS",
       "data": {
-        "id": 930811,
+        "id": 1015647,
         "status": 4,
-        "uid": 508963009
+        "uid": 168598
       }
     }
   },
   "ANCHOR_LOT_START": {
-    "room_display_id": "21919321",
-    "room_real_id": 21919321,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "ANCHOR_LOT_START",
     "data": {
       "cmd": "ANCHOR_LOT_START",
       "data": {
         "asset_icon": "https://i0.hdslb.com/bfs/live/992c2ccf88d3ea99620fb3a75e672e0abe850e9c.png",
         "award_image": "",
-        "award_name": "任天堂Switch",
-        "award_num": 1,
+        "award_name": "奶牛三件套抱枕",
+        "award_num": 5,
         "cur_gift_num": 0,
-        "current_time": 1614523455,
-        "danmu": "清楚清楚",
-        "gift_id": 0,
-        "gift_name": "",
+        "current_time": 1616752919,
+        "danmu": "关注bilibiliGoods",
+        "gift_id": 20004,
+        "gift_name": "吃瓜",
         "gift_num": 1,
-        "gift_price": 0,
+        "gift_price": 100,
         "goaway_time": 180,
-        "goods_id": -99998,
-        "id": 930811,
+        "goods_id": 15,
+        "id": 1015647,
         "is_broadcast": 1,
-        "join_type": 0,
+        "join_type": 1,
         "lot_status": 0,
         "max_time": 300,
-        "require_text": "当前主播粉丝勋章至少1级",
-        "require_type": 2,
-        "require_value": 1,
-        "room_id": 21919321,
+        "require_text": "关注主播",
+        "require_type": 1,
+        "require_value": 0,
+        "room_id": 1017,
         "send_gift_ensure": 0,
         "show_panel": 1,
         "status": 1,
@@ -770,36 +777,64 @@
     }
   },
   "ANCHOR_LOT_END": {
-    "room_display_id": "21919321",
-    "room_real_id": 21919321,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "ANCHOR_LOT_END",
     "data": {
       "cmd": "ANCHOR_LOT_END",
       "data": {
-        "id": 930811
+        "id": 1015647
       }
     }
   },
   "ANCHOR_LOT_AWARD": {
-    "room_display_id": "21919321",
-    "room_real_id": 21919321,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "ANCHOR_LOT_AWARD",
     "data": {
       "cmd": "ANCHOR_LOT_AWARD",
       "data": {
         "award_image": "",
-        "award_name": "任天堂Switch",
+        "award_name": "奶牛三件套抱枕",
         "award_num": 1,
         "award_users": [
           {
-            "uid": 11281218,
-            "uname": "Field_白",
-            "face": "http://i0.hdslb.com/bfs/face/42a8dd82b2b2eed719b9ca0d124f3dce9e5c751a.jpg",
-            "level": 14,
+            "uid": 3928034,
+            "uname": "兔曹",
+            "face": "http://i2.hdslb.com/bfs/face/76925db7252eb16490d88e3a1257f79a99bc6aa3.jpg",
+            "level": 19,
+            "color": 6406234
+          },
+          {
+            "uid": 42616778,
+            "uname": "祈盐",
+            "face": "http://i2.hdslb.com/bfs/face/943c8fc9bf60123f9fbabe1c281ca41e875dd80c.jpg",
+            "level": 52,
+            "color": 16752445
+          },
+          {
+            "uid": 2827110,
+            "uname": "p酱的条形码",
+            "face": "http://i0.hdslb.com/bfs/face/f22bc7af6a3bfc0ceb16ce43742a817544bf18a9.jpg",
+            "level": 16,
+            "color": 6406234
+          },
+          {
+            "uid": 430323435,
+            "uname": "-战战兢兢",
+            "face": "http://i1.hdslb.com/bfs/face/24f195aea33f414ebb1f38c6481467bcde872035.jpg",
+            "level": 1,
+            "color": 9868950
+          },
+          {
+            "uid": 891459,
+            "uname": "风铃儿舞",
+            "face": "http://i0.hdslb.com/bfs/face/7647913cac89ddc14863d69c8c23ffa939bb4e70.jpg",
+            "level": 20,
             "color": 6406234
           }
         ],
-        "id": 930811,
+        "id": 1015647,
         "lot_status": 2,
         "url": "https://live.bilibili.com/p/html/live-lottery/anchor-join.html?is_live_half_webview=1&hybrid_biz=live-lottery-anchor&hybrid_half_ui=1,5,100p,100p,000000,0,30,0,0,1;2,5,100p,100p,000000,0,30,0,0,1;3,5,100p,100p,000000,0,30,0,0,1;4,5,100p,100p,000000,0,30,0,0,1;5,5,100p,100p,000000,0,30,0,0,1;6,5,100p,100p,000000,0,30,0,0,1;7,5,100p,100p,000000,0,30,0,0,1;8,5,100p,100p,000000,0,30,0,0,1",
         "web_url": "https://live.bilibili.com/p/html/live-lottery/anchor-join.html"
@@ -807,61 +842,61 @@
     }
   },
   "SUPER_CHAT_MESSAGE_DELETE": {
-    "room_display_id": "21320551",
-    "room_real_id": 21320551,
+    "room_display_id": "22571958",
+    "room_real_id": 22571958,
     "type": "SUPER_CHAT_MESSAGE_DELETE",
     "data": {
       "cmd": "SUPER_CHAT_MESSAGE_DELETE",
       "data": {
         "ids": [
-          1408856
+          1513269
         ]
       },
-      "roomid": 21320551
+      "roomid": 22571958
     }
   },
   "SPECIAL_GIFT": {
-    "room_display_id": "593",
-    "room_real_id": 47377,
+    "room_display_id": "1017",
+    "room_real_id": 1017,
     "type": "SPECIAL_GIFT",
     "data": {
       "cmd": "SPECIAL_GIFT",
       "data": {
         "39": {
           "action": "end",
-          "id": 3074141768110
+          "id": 3092203068310
         }
       }
     }
   },
   "GUARD_ACHIEVEMENT_ROOM": {
-    "room_display_id": "21415012",
-    "room_real_id": 21415012,
+    "room_display_id": "21547895",
+    "room_real_id": 21547895,
     "type": "GUARD_ACHIEVEMENT_ROOM",
     "data": {
       "cmd": "GUARD_ACHIEVEMENT_ROOM",
       "data": {
-        "room_id": 21415012,
-        "face": "http://i0.hdslb.com/bfs/face/00ff441410e895216ee4e9fd7f761e2aa5122dfe.jpg",
-        "web_basemap_url": "https://i0.hdslb.com/bfs/live/83008812e86cae42049414e965d6ab6002f061cb.png",
-        "app_basemap_url": "https://i0.hdslb.com/bfs/live/83008812e86cae42049414e965d6ab6002f061cb.png",
-        "anchor_basemap_url": "https://i0.hdslb.com/bfs/live/f873a04b1544d8f8bcc37fb2924ac9a2c2554031.png",
-        "headmap_url": "https://i0.hdslb.com/bfs/vc/071eb10548fe9bc482ff69331983d94192ce9507.png",
+        "room_id": 21547895,
+        "face": "http://i0.hdslb.com/bfs/face/7328c4d2bd7f59a10be61589d3595880a8ebcff5.jpg",
+        "web_basemap_url": "https://i0.hdslb.com/bfs/live/1f06adc9618a5b6d6b1ea5e4a6ec41fca919ca86.png",
+        "app_basemap_url": "https://i0.hdslb.com/bfs/live/1f06adc9618a5b6d6b1ea5e4a6ec41fca919ca86.png",
+        "anchor_basemap_url": "https://i0.hdslb.com/bfs/live/c69db9cc9cecd7c2e93718a83a31d26e2234c35a.png",
+        "headmap_url": "https://i0.hdslb.com/bfs/vc/40862cd8245b1742bdc9f2b563fcae1335e6fa6c.png",
         "show_time": 3,
-        "first_line_content": "恭喜主播<%白百合リリィOfficial%>",
+        "first_line_content": "恭喜主播<%花丸晴琉Official%>",
         "first_line_normal_color": "#FFFFFF",
-        "first_line_highlight_color": "#F2AE09",
-        "second_line_content": "舰队规模突破<%100%>",
+        "first_line_highlight_color": "#FFD432",
+        "second_line_content": "舰队规模突破<%1000%>",
         "second_line_normal_color": "#FFFFFF",
         "second_line_highlight_color": "#06DDFF",
         "is_first": true,
-        "is_first_new": false,
-        "current_achievement_level": 2,
-        "anchor_guard_achieve_level": 100,
+        "is_first_new": true,
+        "current_achievement_level": 3,
+        "anchor_guard_achieve_level": 1000,
         "event_type": 1,
         "anchor_modal": {
           "show_time": 5,
-          "first_line_content": "恭喜当前舰队规模突破<%100%>",
+          "first_line_content": "恭喜当前舰队规模突破<%1000%>",
           "second_line_content": "至直播中心 - 获奖记录填写收货信息可获得实物勋章奖励哦～",
           "highlight_color": "#00DCFF"
         }
@@ -869,15 +904,15 @@
     }
   },
   "ROOM_SKIN_MSG": {
-    "room_display_id": "21415012",
-    "room_real_id": 21415012,
+    "room_display_id": "21547895",
+    "room_real_id": 21547895,
     "type": "ROOM_SKIN_MSG",
     "data": {
       "cmd": "ROOM_SKIN_MSG",
-      "skin_id": 65,
+      "skin_id": 64,
       "status": 1,
       "end_time": 2145888000,
-      "current_time": 1614523200,
+      "current_time": 1616245381,
       "only_local": false,
       "scatter": {
         "min": 1,
@@ -886,34 +921,34 @@
       "skin_config": {
         "android": {
           "1": {
-            "zip": "https://i0.hdslb.com/bfs/live/roomSkin/d50490b2fb05cc32fe69a9ea40839fd68c575738.zip",
-            "md5": "1E111556D18406698350C007828EA0F8"
+            "zip": "https://i0.hdslb.com/bfs/live/roomSkin/545a91102973626b1e39cec1c7cb93edfd55a7d8.zip",
+            "md5": "083B542663A17F47E0379EF7E7269CA3"
           }
         },
         "ios": {
           "1": {
-            "zip": "https://i0.hdslb.com/bfs/live/roomSkin/8cc833f1e5e9caac5afd0f0d494dbb79e505b06e.zip",
-            "md5": "0781BED8AC8F09D18EB1F2091F211A82"
+            "zip": "https://i0.hdslb.com/bfs/live/roomSkin/ae3c6c3ca3b32fd21d3612dc7938a5bfce928dcf.zip",
+            "md5": "AB4F5A4D83FACA7D45AF2ACCC175CEAF"
           }
         },
         "ipad": {
           "1": {
-            "zip": "https://i0.hdslb.com/bfs/live/roomSkin/c814b4bc96e0ceae0be7c70300a49e2cdc9ccecc.zip",
-            "md5": "ED14E47E9D32FABB86AE857E8CBD1D1D"
+            "zip": "https://i0.hdslb.com/bfs/live/roomSkin/e26c2cb17d3b063d736104926bdeadcacef8a46b.zip",
+            "md5": "B2A4F7BD6B4F446BC85980B0B31EF37B"
           }
         },
         "web": {
           "1": {
-            "zip": "https://i0.hdslb.com/bfs/live/roomSkin/bfac22ed069c4d41a6b9e2a305c9efd58bc07137.zip",
-            "md5": "9AE7E63C79466165ED03131CA6C62D1C",
+            "zip": "https://i0.hdslb.com/bfs/live/roomSkin/a6bde45e0de2010afebdeab3572c2d078f2b3525.zip",
+            "md5": "9B0E3DEC95E3DB1CDC49CF838B539715",
             "platform": "web",
             "version": "1",
-            "headInfoBgPic": "https://i0.hdslb.com/bfs/live/roomSkin/7ba5a32cda0f985aa02bb05f453eac1f03cb976d.png",
-            "giftControlBgPic": "https://i0.hdslb.com/bfs/live/roomSkin/f864809e6be7b3fe834de6d37b5b7f42b2cdff2a.png",
-            "rankListBgPic": "https://i0.hdslb.com/bfs/live/roomSkin/00d1718591af1b5117c588f7bac1efb6c1e97fde.png",
-            "mainText": "#FFFFD432",
+            "headInfoBgPic": "https://i0.hdslb.com/bfs/live/roomSkin/78c2321d946dcdf57c37779e674da6983f0850ee.png",
+            "giftControlBgPic": "https://i0.hdslb.com/bfs/live/roomSkin/13f1bad1b1c1a050df36beb907d742a6a68d3fdb.png",
+            "rankListBgPic": "https://i0.hdslb.com/bfs/live/roomSkin/93db8458c57791f7b89ec75ff54221aa8f33e9fa.png",
+            "mainText": "#FFf2ae09",
             "normalText": "#FF999999",
-            "highlightContent": "#FFFFD432",
+            "highlightContent": "#FFf2ae09",
             "border": "#33999999"
           }
         }
@@ -921,85 +956,89 @@
     }
   },
   "ROOM_SILENT_ON": {
-    "room_display_id": "14327465",
-    "room_real_id": 14327465,
+    "room_display_id": "392523",
+    "room_real_id": 392523,
     "type": "ROOM_SILENT_ON",
     "data": {
       "data": {
         "type": "level",
         "level": 1,
-        "second": 1614609689
+        "second": -1
       },
       "cmd": "ROOM_SILENT_ON"
     }
   },
   "room_admin_entrance": {
-    "room_display_id": "704808",
-    "room_real_id": 704808,
+    "room_display_id": "22571958",
+    "room_real_id": 22571958,
     "type": "room_admin_entrance",
     "data": {
       "cmd": "room_admin_entrance",
       "msg": "系统提示：你已被主播设为房管",
-      "uid": 1315413
+      "uid": 602200741
     }
   },
   "ROOM_ADMINS": {
-    "room_display_id": "704808",
-    "room_real_id": 704808,
+    "room_display_id": "22571958",
+    "room_real_id": 22571958,
     "type": "ROOM_ADMINS",
     "data": {
       "cmd": "ROOM_ADMINS",
       "uids": [
-        198297,
-        477002148,
-        1576121,
-        6055289,
-        380829248,
-        331257408,
-        9617619,
-        455557356,
-        235555226,
-        37090048,
-        372984197,
-        413748120,
-        410484677,
-        282994,
-        692283831,
-        1734978373,
-        2143967328,
-        1315413
+        346240,
+        623441609,
+        175949399,
+        102027842,
+        456749835,
+        12253206,
+        612560157,
+        517746113,
+        476542825,
+        492724746,
+        492862,
+        25115,
+        18149131,
+        9066351,
+        90873,
+        480680646,
+        529249,
+        922573,
+        63231,
+        1277504905,
+        15989638,
+        602200741
       ]
     }
   },
   "CHANGE_ROOM_INFO": {
-    "room_display_id": "704808",
-    "room_real_id": 704808,
+    "room_display_id": "3822389",
+    "room_real_id": 3822389,
     "type": "CHANGE_ROOM_INFO",
     "data": {
       "cmd": "CHANGE_ROOM_INFO",
-      "background": "http://i0.hdslb.com/bfs/live/room_bg/5e2fda6b1198a4f76c9ae5bd7278a195d56f91d5.png",
-      "roomid": 704808
+      "background": "http://i0.hdslb.com/bfs/live/room_bg/b859be71904653e00d81024aaf2b5af3da046e48.jpg",
+      "roomid": 3822389
     }
   },
   "TRADING_SCORE": {
-    "room_display_id": "22485731",
-    "room_real_id": 22485731,
+    "room_display_id": "21672022",
+    "room_real_id": 21672022,
     "type": "TRADING_SCORE",
     "data": {
       "cmd": "TRADING_SCORE",
       "data": {
         "bubble_show_time": 3,
-        "num": 300,
+        "num": 100,
         "score_id": 3,
-        "uid": 652240042,
-        "update_time": 1614579792,
+        "uid": 477342747,
+        "update_time": 1616758135,
         "update_type": 1
       }
     }
   },
   "SUPER_CHAT_ENTRANCE": {
-    "room_display_id": "22347045",
-    "room_real_id": 22347045,
+    "room_display_id": "876396",
+    "room_real_id": 876396,
     "type": "SUPER_CHAT_ENTRANCE",
     "data": {
       "cmd": "SUPER_CHAT_ENTRANCE",
@@ -1009,12 +1048,12 @@
         "icon": "https://i0.hdslb.com/bfs/live/0a9ebd72c76e9cbede9547386dd453475d4af6fe.png",
         "broadcast_type": 0
       },
-      "roomid": "22347045"
+      "roomid": "876396"
     }
   },
   "ROOM_SILENT_OFF": {
-    "room_display_id": "14327465",
-    "room_real_id": 14327465,
+    "room_display_id": "392523",
+    "room_real_id": 392523,
     "type": "ROOM_SILENT_OFF",
     "data": {
       "data": {
@@ -1026,51 +1065,14 @@
     }
   },
   "ROOM_SHIELD": {
-    "room_display_id": "593",
-    "room_real_id": 47377,
+    "room_display_id": "21685677",
+    "room_real_id": 21685677,
     "type": "ROOM_SHIELD",
     "data": {
       "cmd": "ROOM_SHIELD",
       "type": 1,
-      "user": [
-        "28777764_47md94pmmm"
-      ],
-      "keyword": [
-        "本色",
-        "碧萝",
-        "乔萝莉",
-        "58岁",
-        "走了",
-        "溜了",
-        "ig",
-        "日服",
-        "和谐",
-        "牛头人",
-        "ntr",
-        "阉割",
-        "机翼论",
-        "掀裙子",
-        "喂屎",
-        "下周见",
-        "感谢圣剑",
-        "@圣剑",
-        "？？？？？",
-        "?????",
-        "开车",
-        "真名",
-        "真正的名字",
-        "咕咕咕",
-        "@生煎",
-        "感谢生煎少",
-        "生煎少女更",
-        "圣剑少女更",
-        "退钱",
-        "色影师",
-        "垃圾",
-        "老婆",
-        "干杯",
-        "hop"
-      ]
+      "user": "",
+      "keyword": ""
     }
   },
   "PK_BATTLE_ENTRANCE": {
@@ -1082,6 +1084,232 @@
       "timestamp": 1614744000,
       "data": {
         "is_open": true
+      }
+    }
+  },
+  "SYS_MSG": {
+    "room_display_id": "21320551",
+    "room_real_id": 21320551,
+    "type": "SYS_MSG",
+    "data": {
+      "cmd": "SYS_MSG",
+      "msg": "争夺开启，时间周五20点至周日20点，逾期不候哟！",
+      "url": ""
+    }
+  },
+  "WARNING": {
+    "room_display_id": "21463247",
+    "room_real_id": 21463247,
+    "type": "WARNING",
+    "data": {
+      "cmd": "WARNING",
+      "msg": "禁止在直播间内展示平台外的评论、弹幕内容，请立即调整",
+      "roomid": 21463247
+    }
+  },
+  "CUT_OFF": {
+    "room_display_id": "21463247",
+    "room_real_id": 21463247,
+    "type": "CUT_OFF",
+    "data": {
+      "cmd": "CUT_OFF",
+      "msg": "禁止在直播间内展示平台外的评论、弹幕内容，请立即调整",
+      "roomid": 21463247
+    }
+  },
+  "HOT_ROOM_NOTIFY": {
+    "room_display_id": "21987615",
+    "room_real_id": 21987615,
+    "type": "HOT_ROOM_NOTIFY",
+    "data": {
+      "cmd": "HOT_ROOM_NOTIFY",
+      "data": {
+        "threshold": 100000,
+        "ttl": 300,
+        "exit_no_refresh": 1,
+        "random_delay_req_v2": [
+          {
+            "path": "/live/getRoundPlayVideo",
+            "delay": 120000
+          },
+          {
+            "path": "/xlive/web-room/v1/index/getOffLiveList",
+            "delay": 120000
+          }
+        ]
+      }
+    }
+  },
+  "VOICE_JOIN_ROOM_COUNT_INFO": {
+    "room_display_id": "21013446",
+    "room_real_id": 21013446,
+    "type": "VOICE_JOIN_ROOM_COUNT_INFO",
+    "data": {
+      "cmd": "VOICE_JOIN_ROOM_COUNT_INFO",
+      "data": {
+        "room_id": 21013446,
+        "root_status": 1,
+        "room_status": 1,
+        "apply_count": 0,
+        "notify_count": 0,
+        "red_point": 0
+      },
+      "roomid": 21013446
+    }
+  },
+  "VOICE_JOIN_LIST": {
+    "room_display_id": "21013446",
+    "room_real_id": 21013446,
+    "type": "VOICE_JOIN_LIST",
+    "data": {
+      "cmd": "VOICE_JOIN_LIST",
+      "data": {
+        "room_id": 21013446,
+        "category": 1,
+        "apply_count": 0,
+        "red_point": 1,
+        "refresh": 1
+      },
+      "roomid": 21013446
+    }
+  },
+  "OBS_SHIELD_STATUS_UPDATE": {
+    "room_display_id": "9162799",
+    "room_real_id": 9162799,
+    "type": "OBS_SHIELD_STATUS_UPDATE",
+    "data": {
+      "cmd": "OBS_SHIELD_STATUS_UPDATE",
+      "data": {
+        "change": 1
+      },
+      "roomid": "9162799"
+    }
+  },
+  "MATCH_ROOM_CONF": {
+    "room_display_id": "1017",
+    "room_real_id": 1017,
+    "type": "MATCH_ROOM_CONF",
+    "data": {
+      "cmd": "MATCH_ROOM_CONF",
+      "data": {
+        "type": "3",
+        "close_button": "0",
+        "force_push": "0",
+        "button_name": "",
+        "background": "https://i0.hdslb.com/bfs/live/c64f3fff212ce60a41702085b29c4727349dfaa7.png",
+        "conf_id": "be350892fc91423e8f87fa3c9dbe5a7c",
+        "conf_name": "超级电玩厅-恐惧之间",
+        "rooms_info": [
+          {
+            "room_id": "1017",
+            "room_name": "逍遥散人",
+            "live_status": 0
+          },
+          {
+            "room_id": "36250",
+            "room_name": "靖菌命",
+            "live_status": 1
+          },
+          {
+            "room_id": "1016",
+            "room_name": "神奇陆夫人",
+            "live_status": 1
+          },
+          {
+            "room_id": "1010",
+            "room_name": "KB呆又呆",
+            "live_status": 1
+          },
+          {
+            "room_id": "5186494",
+            "room_name": "咸鱼_栗",
+            "live_status": 1
+          },
+          {
+            "room_id": "6154037",
+            "room_name": "Asaki大人",
+            "live_status": 1
+          },
+          {
+            "room_id": "21996307",
+            "room_name": "文韬Stefan",
+            "live_status": 2
+          },
+          {
+            "room_id": "308543",
+            "room_name": "v猫诺v",
+            "live_status": 1
+          },
+          {
+            "room_id": "3580061",
+            "room_name": "Nana",
+            "live_status": 1
+          },
+          {
+            "room_id": "452138",
+            "room_name": "丝茉茉i",
+            "live_status": 1
+          }
+        ],
+        "season_info": [],
+        "background_url": "",
+        "scatter": {
+          "max": 20,
+          "min": 5
+        },
+        "button_link": "",
+        "rooms_color": {
+          "font_color": "#d1ea8e",
+          "background_color": "#619232",
+          "border_color": "#d1ea8e"
+        },
+        "state": 0
+      }
+    }
+  },
+  "STUDIO_ROOM_CLOSE": {
+    "room_display_id": "21396545",
+    "room_real_id": 21396545,
+    "type": "STUDIO_ROOM_CLOSE",
+    "data": {
+      "msg": "演播厅模式已关闭，重新开播即可进入正常模式",
+      "cmd": "STUDIO_ROOM_CLOSE",
+      "roomid": "21396545"
+    }
+  },
+  "VTR_GIFT_LOTTERY": {
+    "room_display_id": "876396",
+    "room_real_id": 876396,
+    "type": "VTR_GIFT_LOTTERY",
+    "data": {
+      "cmd": "VTR_GIFT_LOTTERY",
+      "data": {
+        "act_name": "超级幸运星Ⅲ繁星",
+        "award_username": "",
+        "interact_msg": "恭喜 李花生-李化生-理化生 参与“超级幸运星Ⅲ繁星”获得了虚拟主播专属奖品 春季挂件-进击的冰糖",
+        "toast_msg": "",
+        "room_id": 876396,
+        "uid": 0,
+        "highlight_col": "#000000",
+        "dark_highlight_col": "#000000",
+        "lottery_id": "1616754492121700007"
+      }
+    }
+  },
+  "ANCHOR_NORMAL_NOTIFY": {
+    "room_display_id": "1017",
+    "room_real_id": 1017,
+    "type": "ANCHOR_NORMAL_NOTIFY",
+    "data": {
+      "cmd": "ANCHOR_NORMAL_NOTIFY",
+      "data": {
+        "type": 1,
+        "show_type": 1,
+        "info": {
+          "icon": "https://i0.hdslb.com/bfs/live/f3ebd37ee59991bc45538be58e68a6d3aa43ccca.png",
+          "title": "",
+          "content": "恭喜，获得推荐位buff加持，上推荐的几率大大提高，持续时间：4小时。"
+        }
       }
     }
   }
