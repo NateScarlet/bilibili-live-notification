@@ -93,7 +93,7 @@ def _distinct_event(event, data: dict) -> bool:
     rid = str(event["room_display_id"])
     key = config.get(f"BILIBILI_EVENT_DISTINCT_KEY_{event_type}", data)
     if key == "":
-        return
+        return False
     event_keys = ROOM_EVENT_TYPE_KEYS[rid][event_type]
     if key in event_keys:
         LOGGER.info(
@@ -161,7 +161,7 @@ async def _handle_event(event):
 
 def _iterate_rooms():
     for i in config.discover_bilibili_room_id():
-        room1 = live.LiveDanmaku(i)
+        room1 = live.LiveDanmaku(i) # type: ignore
         room1.on("ALL")(_handle_event)
         yield room1
 
@@ -193,7 +193,7 @@ async def main():
             f'[启动] - {_format_time(datetime.now())}',
             '服务启动测试邮件',
         )
-    await asyncio.gather(*(i.connect(True) for i in _iterate_rooms()))
+    await asyncio.gather(*(i.connect(True) for i in _iterate_rooms())) # type: ignore
     LOGGER.info('未配置要监控的直播间，请查看 README.md')
 
 

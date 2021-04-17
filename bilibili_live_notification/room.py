@@ -26,7 +26,7 @@ def get(rid: str) -> dict:
     """
     LOGGER.info("fetch room data: %s", rid)
     name = config.get_room_name(rid)
-    info = live.get_room_info(rid)
+    info = live.get_room_info(rid) # type: ignore
     url = f'https://live.bilibili.com/{rid}'
     ret = dict(
         name=name,
