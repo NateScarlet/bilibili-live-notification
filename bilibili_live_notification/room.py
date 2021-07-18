@@ -15,7 +15,7 @@ from . import config, rate_limit
 LOGGER = logging.getLogger(__name__)
 
 
-def get(rid: str) -> dict:
+async def get(rid: str) -> dict:
     """Get room data.
 
     Args:
@@ -26,7 +26,8 @@ def get(rid: str) -> dict:
     """
     LOGGER.info("fetch room data: %s", rid)
     name = config.get_room_name(rid)
-    info = live.get_room_info(rid) # type: ignore
+    info = await live.LiveRoom(rid).get_room_info() # type: ignore
+    assert info, "info is None"
     url = f'https://live.bilibili.com/{rid}'
     ret = dict(
         name=name,
@@ -62,7 +63,7 @@ async def get_with_cache(rid: str, *, ttl: float = 3600) -> dict:
             _CACHE[rid][0] < time.time() - ttl
         ):
             await rate_limit.BILIBILI_API.get().wait()
-            entry = (time.time(), get(rid))
+            entry = (time.time(), await get(rid))
             _CACHE[rid] = entry
             ROOM_POPUPARITY[rid] = entry[1]["popularity"]
     _, ret = _CACHE[rid]

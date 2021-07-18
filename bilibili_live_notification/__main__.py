@@ -162,7 +162,7 @@ async def _handle_event(event):
 def _iterate_rooms():
     for i in config.discover_bilibili_room_id():
         room1 = live.LiveDanmaku(i) # type: ignore
-        room1.on("ALL")(_handle_event)
+        room1.add_event_listener("ALL", _handle_event) # type: ignore
         yield room1
 
 
@@ -193,7 +193,7 @@ async def main():
             f'[启动] - {_format_time(datetime.now())}',
             '服务启动测试邮件',
         )
-    await asyncio.gather(*(i.connect(True) for i in _iterate_rooms())) # type: ignore
+    await asyncio.gather(*(i.connect() for i in _iterate_rooms())) # type: ignore
     LOGGER.info('未配置要监控的直播间，请查看 README.md')
 
 
