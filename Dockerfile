@@ -18,9 +18,7 @@ RUN set -ex\
     && apk add --no-cache --virtual .build-deps \
         gcc \
         musl-dev \
-        libxml2-dev \
-        libxslt-dev \
-    && apk add --no-cache libxslt \
+        git \
     && pip install -U pip\
     && pip install -r ./requirements.txt \
     && apk del .build-deps

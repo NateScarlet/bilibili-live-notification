@@ -1,3 +1,3 @@
-bilibili-api==6.1.2
+git+https://github.com/NateScarlet/bilibili_api.git@4693eb40051ce0c51f969f07fa128275fa1fd250
 JinJa2==3.0.1
 aiohttp==3.7.4.post0
