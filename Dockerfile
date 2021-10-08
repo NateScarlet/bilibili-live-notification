@@ -4,12 +4,13 @@ FROM python:3.8-alpine
 ARG PIP_INDEX_URL
 ENV PIP_INDEX_URL=${PIP_INDEX_URL}
 
-# Example: mirrors.tuna.tsinghua.edu.cn
+# Example: https://mirrors.tuna.tsinghua.edu.cn/alpine
 ARG ALPINE_MIRROR
-RUN if [ ! -z "${ALPINE_MIRROR}" ]; then \
-    sed -i "s/dl-cdn.alpinelinux.org/${ALPINE_MIRROR}/g" /etc/apk/repositories && \
+RUN if [ -n "${ALPINE_MIRROR}" ]; then \
+    sed -i "s@https://dl-cdn.alpinelinux.org/alpine@${ALPINE_MIRROR}@g" /etc/apk/repositories && \
     cat /etc/apk/repositories; \
     fi;
+
 
 WORKDIR /app
 
