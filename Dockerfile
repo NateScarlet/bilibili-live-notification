@@ -17,6 +17,7 @@ COPY ./requirements.txt ./
 RUN set -ex\
     && apk add --no-cache --virtual .build-deps \
         gcc \
+        g++ \
         musl-dev \
     && pip install -U pip\
     && pip install -r ./requirements.txt \
