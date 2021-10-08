@@ -21,7 +21,9 @@ RUN set -ex\
         musl-dev \
     && pip install -U pip\
     && pip install -r ./requirements.txt \
-    && apk del .build-deps
+    && apk del .build-deps \
+    && apk add --no-cache \
+        libstdc++ 
 
 COPY ./ ./
 
