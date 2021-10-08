@@ -164,6 +164,9 @@ async def _connect(id: str) -> None:
 
     while True:
         await room1.connect()
+        if room1.get_status() == room1.STATUS_ESTABLISHED:
+            await room1.disconnect()
+        
 
 async def main():
     os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
