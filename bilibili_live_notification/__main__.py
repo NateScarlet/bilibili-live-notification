@@ -38,6 +38,7 @@ async def _handle_view(event):
     rid = event["room_display_id"]
     room.ROOM_POPUPARITY[rid] = event["data"]
 
+
 EVENT_EXAMPLE = {}
 
 
@@ -62,8 +63,7 @@ def _collect_event_example(event):
     is_new = event_type not in EVENT_EXAMPLE
     EVENT_EXAMPLE[event_type] = event
     if is_new:
-        LOGGER.info(
-            "update ./event.example.json due to new event type: %s", event_type)
+        LOGGER.info("update ./event.example.json due to new event type: %s", event_type)
         _save_event_example()
 
 
@@ -74,11 +74,9 @@ def _throttle_event(event) -> bool:
     event_type = event["type"]
     rid = str(event["room_display_id"])
     event_time_key = (rid, event_type)
-    if (
-        event_time_key in ROOM_EVENT_TIME and
-        time.time() - ROOM_EVENT_TIME[event_time_key] < int(
-            config.get(f"BILIBILI_EVENT_THROTTLE_{event_type}") or "0")
-    ):
+    if event_time_key in ROOM_EVENT_TIME and time.time() - ROOM_EVENT_TIME[
+        event_time_key
+    ] < int(config.get(f"BILIBILI_EVENT_THROTTLE_{event_type}") or "0"):
         LOGGER.info("event throttled: %s: %s", rid, event_type)
         return True
     ROOM_EVENT_TIME[event_time_key] = time.time()
@@ -106,8 +104,7 @@ def _distinct_event(event, data: dict) -> bool:
 
     event_keys[key] = True
     limit = int(
-        config.get(f"BILIBILI_EVENT_DISTINCT_LIMIT_{event_type}", data) or
-        "128",
+        config.get(f"BILIBILI_EVENT_DISTINCT_LIMIT_{event_type}", data) or "128",
     )
     while len(event_keys) > limit >= 0:
         event_keys.popitem(last=False)
@@ -152,21 +149,22 @@ async def _handle_event(event):
 
     await webhook.trigger_many(
         (
-            config.get_csv(f"BILIBILI_ROOM_WEBHOOK_{rid}_{event_type}") or
-            config.get_csv(f"BILIBILI_WEBHOOK_{event_type}")
+            config.get_csv(f"BILIBILI_ROOM_WEBHOOK_{rid}_{event_type}")
+            or config.get_csv(f"BILIBILI_WEBHOOK_{event_type}")
         ),
         data,
     )
 
+
 async def _connect(id: str) -> None:
-    room1 = live.LiveDanmaku(id) #type: ignore
-    room1.add_event_listener("ALL", _handle_event) # type: ignore
+    room1 = live.LiveDanmaku(id)  # type: ignore
+    room1.add_event_listener("ALL", _handle_event)  # type: ignore
 
     while True:
         await room1.connect()
         if room1.get_status() == room1.STATUS_ESTABLISHED:
             await room1.disconnect()
-        
+
 
 async def main():
     os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
@@ -174,30 +172,30 @@ async def main():
     room.CACHE_MU.set(asyncio.Lock())
 
     handler = logging.StreamHandler()
-    handler.setFormatter(logging.Formatter(
-        "%(levelname)-6s[%(asctime)s]:%(name)s:%(lineno)d: %(message)s",
-        "%Y-%m-%d %H:%M:%S"
-    ))
+    handler.setFormatter(
+        logging.Formatter(
+            "%(levelname)-6s[%(asctime)s]:%(name)s:%(lineno)d: %(message)s",
+            "%Y-%m-%d %H:%M:%S",
+        )
+    )
     debug_logger_names = config.get_csv("DEBUG")
     for logger in [LOGGER, webhook.LOGGER, room.LOGGER]:
         logger.setLevel(
-            logging.DEBUG
-            if logger.name in debug_logger_names
-            else logging.INFO
+            logging.DEBUG if logger.name in debug_logger_names else logging.INFO
         )
         logger.addHandler(handler)
 
     await webhook.trigger_many(config.get_csv("SERVER_WEBHOOK_START"))
     if config.TEST_EMAIL_TO:
-        LOGGER.info('发送测试邮件')
+        LOGGER.info("发送测试邮件")
         emailtools.send(
             config.TEST_EMAIL_TO,
-            f'[启动] - {_format_time(datetime.now())}',
-            '服务启动测试邮件',
+            f"[启动] - {_format_time(datetime.now())}",
+            "服务启动测试邮件",
         )
-    await asyncio.gather(*(_connect(i) for i in config.discover_bilibili_room_id())) # type: ignore
-    LOGGER.info('未配置要监控的直播间，请查看 README.md')
+    await asyncio.gather(*(_connect(i) for i in config.discover_bilibili_room_id()))  # type: ignore
+    LOGGER.info("未配置要监控的直播间，请查看 README.md")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())

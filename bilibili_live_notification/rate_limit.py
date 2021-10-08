@@ -7,9 +7,9 @@ import contextvars
 import time
 
 
-class RateLimiter():
-    """Rate limit of size {size}, and increase by {rate} per second.
-    """
+class RateLimiter:
+    """Rate limit of size {size}, and increase by {rate} per second."""
+
     def __init__(self, size: float, rate: float):
         self.size = size
         self.rate = rate
@@ -33,7 +33,7 @@ class RateLimiter():
     def _update_allowance(self):
         now = time.time()
         self.allowance = min(
-            self.allowance+(now - self.last_check_time) * self.rate,
+            self.allowance + (now - self.last_check_time) * self.rate,
             self.size,
         )
         self.last_check_time = now

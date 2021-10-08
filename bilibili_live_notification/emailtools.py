@@ -17,12 +17,12 @@ def send(to_addrs: list, subject: str, payload: str):
         return
 
     msg = email.message.Message()
-    msg['From'] = email.utils.formataddr(
-        ('哔哩哔哩开播提醒', config.EMAIL_FROM),
+    msg["From"] = email.utils.formataddr(
+        ("哔哩哔哩开播提醒", config.EMAIL_FROM),
     )
-    msg['To'] = msg["From"]
-    msg['Bcc'] = ','.join(to_addrs)
-    msg['Subject'] = subject
+    msg["To"] = msg["From"]
+    msg["Bcc"] = ",".join(to_addrs)
+    msg["Subject"] = subject
     msg.add_header("Sender", config.EMAIL_FROM)
     msg.set_payload(payload, "utf-8")
 

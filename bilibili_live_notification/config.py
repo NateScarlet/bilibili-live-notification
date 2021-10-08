@@ -25,10 +25,7 @@ def get(name: str, data: Optional[dict] = None) -> str:
     var_prefix = "TEMPLATE_VAR_"
     if name.startswith(var_prefix):
         return value
-    return jinja2.Template(
-        value,
-        undefined=_ChainableDebugUndefined,
-    ).render(
+    return jinja2.Template(value, undefined=_ChainableDebugUndefined,).render(
         **{
             **dict(datetime=datetime),
             **dict(get_items(var_prefix, data)),
@@ -46,7 +43,7 @@ def parse_csv(v: Optional[str]) -> list:
     Returns:
         list: values
     """
-    return [i for i in (v or '').split(",") if i]
+    return [i for i in (v or "").split(",") if i]
 
 
 def get_csv(name: str, data: Optional[dict] = None) -> list:
@@ -70,11 +67,10 @@ def get_items(prefix: str, data: Optional[dict] = None) -> Iterator[Tuple[str, s
     """
     for i in os.environ.keys():
         if i.startswith(prefix):
-            yield i[len(prefix):], get(i, data)
+            yield i[len(prefix) :], get(i, data)
 
 
-EMAIL_FROM = (get("EMAIL_FROM")
-              or "bilibili-live-notification@noreply.github.com")
+EMAIL_FROM = get("EMAIL_FROM") or "bilibili-live-notification@noreply.github.com"
 EMAIL_HOST = get("EMAIL_HOST") or "smtp.qq.com"
 EMAIL_PORT = int(get("EMAIL_PORT") or "465")
 EMAIL_USER = get("EMAIL_USER") or "example@qq.com"
@@ -93,7 +89,7 @@ def discover_bilibili_room_id() -> Iterator[str]:
     prefix = "BILIBILI_ROOM_NAME_"
     for i in os.environ.keys():
         if i.startswith(prefix):
-            yield i[len(prefix):]
+            yield i[len(prefix) :]
 
 
 def get_room_name(room_display_id: str) -> str:
@@ -106,7 +102,7 @@ def get_room_name(room_display_id: str) -> str:
         str: NAME config for this room.
     """
 
-    return os.getenv(f'BILIBILI_ROOM_NAME_{room_display_id}') or room_display_id
+    return os.getenv(f"BILIBILI_ROOM_NAME_{room_display_id}") or room_display_id
 
 
 def get_room_email_to(room_display_id: str) -> list:

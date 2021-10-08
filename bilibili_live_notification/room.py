@@ -26,9 +26,9 @@ async def get(rid: str) -> dict:
     """
     LOGGER.info("fetch room data: %s", rid)
     name = config.get_room_name(rid)
-    info = await live.LiveRoom(rid).get_room_info() # type: ignore
+    info = await live.LiveRoom(rid).get_room_info()  # type: ignore
     assert info, "info is None"
-    url = f'https://live.bilibili.com/{rid}'
+    url = f"https://live.bilibili.com/{rid}"
     ret = dict(
         name=name,
         title=info["room_info"]["title"],
@@ -58,10 +58,7 @@ async def get_with_cache(rid: str, *, ttl: float = 3600) -> dict:
     await asyncio.sleep(0)
     rid = str(rid)
     async with CACHE_MU.get():
-        if (
-            rid not in _CACHE or
-            _CACHE[rid][0] < time.time() - ttl
-        ):
+        if rid not in _CACHE or _CACHE[rid][0] < time.time() - ttl:
             await rate_limit.BILIBILI_API.get().wait()
             entry = (time.time(), await get(rid))
             _CACHE[rid] = entry
