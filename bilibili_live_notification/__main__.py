@@ -160,11 +160,7 @@ async def _handle_event(event):
 
 async def _connect(id: str) -> None:
     room1 = live.LiveDanmaku(id) #type: ignore
-    async def _handle_timeout():
-        await room1.disconnect()
-
     room1.add_event_listener("ALL", _handle_event) # type: ignore
-    room1.add_event_listener("TIMEOUT", _handle_timeout) # type: ignore
 
     while True:
         await room1.connect()
