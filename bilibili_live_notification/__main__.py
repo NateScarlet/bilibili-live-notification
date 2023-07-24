@@ -128,7 +128,7 @@ async def _handle_event(event, *, skip_room_data_update=False):
 
     # update room data cache
     if not skip_room_data_update and event_type in ("LIVE", "PREPARING", "ROOM_CHANGE"):
-        room_data = await room.get(rid, ttl=0)
+        room_data = await room.get(rid, max_age_secs=0)
 
     if event_type == "LIVE":
         await _handle_live(event)
@@ -171,7 +171,7 @@ async def _poll(id: str, interval_secs: int) -> None:
     while True:
         await asyncio.sleep(0)
         try:
-            data = await room.get(id, ttl=0)
+            data = await room.get(id, max_age_secs=0)
             is_live = data["data"]["room_info"]["live_status"] == 1
             if is_live and not last_is_live:
                 now = int(time.time())

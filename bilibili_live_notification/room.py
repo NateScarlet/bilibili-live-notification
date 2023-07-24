@@ -48,7 +48,7 @@ ROOM_POPUPARITY = defaultdict(lambda: 0)
 _SINGLE_FLIGHT = defaultdict(lambda: asyncio.locks.Lock())
 
 
-async def get(rid: str, *, ttl: float = 3600) -> dict:
+async def get(rid: str, *, max_age_secs: float = 3600) -> dict:
     """Get room data with a ttl cache
 
     Args:
@@ -60,7 +60,7 @@ async def get(rid: str, *, ttl: float = 3600) -> dict:
     """
 
     rid = str(rid)
-    if rid not in _CACHE or _CACHE[rid][0] < time.time() - ttl:
+    if rid not in _CACHE or time.time() - _CACHE[rid][0] > max_age_secs:
         in_flight = _SINGLE_FLIGHT[rid].locked()
         try:
             async with _SINGLE_FLIGHT[rid]:
@@ -73,7 +73,7 @@ async def get(rid: str, *, ttl: float = 3600) -> dict:
                 "possible rate limit reached during fetch: %s, will retry", rid
             )
             await asyncio.sleep(0)
-            return await get(rid, ttl=ttl)
+            return await get(rid, max_age_secs=max_age_secs)
 
     _, ret = _CACHE[rid]
     ret["popularity"] = ROOM_POPUPARITY[rid]
