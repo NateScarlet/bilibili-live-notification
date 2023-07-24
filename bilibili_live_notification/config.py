@@ -78,7 +78,7 @@ EMAIL_PASSWORD = get("EMAIL_PASSWORD") or "<email password>"
 EMAIL_TO = parse_csv(get("EMAIL_TO"))
 TEST_EMAIL_TO = parse_csv(get("TEST_EMAIL_TO"))
 BILIBILI_EMAIL_THROTTLE = int(get("BILIBILI_EMAIL_THROTTLE") or "600")
-
+POLLING_INTERVAL_SECS = int(get("BILIBILI_POLLING_INTERVAL_SECS") or "0")
 
 def discover_bilibili_room_id() -> Iterator[str]:
     """get room id from env vars that has BILIBILI_ROOM_NAME_ prefix

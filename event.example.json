@@ -1,7 +1,7 @@
 {
   "VIEW": {
-    "room_display_id": "1017",
-    "room_real_id": 1017,
+    "room_display_id": "298626",
+    "room_real_id": 298626,
     "type": "VIEW",
     "data": 1
   },
@@ -692,13 +692,15 @@
     }
   },
   "PREPARING": {
-    "room_display_id": "22571958",
-    "room_real_id": 22571958,
+    "room_display_id": "298626",
+    "room_real_id": 298626,
     "type": "PREPARING",
     "data": {
       "cmd": "PREPARING",
-      "round": 1,
-      "roomid": "22571958"
+      "is_report": false,
+      "msg_id": "818654432735234",
+      "roomid": "298626",
+      "send_time": 1690115339413
     }
   },
   "WIDGET_BANNER": {
@@ -1612,6 +1614,28 @@
           23051879
         ]
       }
+    }
+  },
+  "VERIFICATION_SUCCESSFUL": {
+    "room_display_id": "298626",
+    "room_real_id": 298626,
+    "type": "VERIFICATION_SUCCESSFUL",
+    "data": null
+  },
+  "WATCHED_CHANGE": {
+    "room_display_id": "298626",
+    "room_real_id": 298626,
+    "type": "WATCHED_CHANGE",
+    "data": {
+      "cmd": "WATCHED_CHANGE",
+      "data": {
+        "num": 1,
+        "text_large": "1人看过",
+        "text_small": "1"
+      },
+      "is_report": false,
+      "msg_id": "818662663526400",
+      "send_time": 1690115355112
     }
   }
 }

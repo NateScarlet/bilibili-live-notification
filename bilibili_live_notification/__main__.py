@@ -156,7 +156,7 @@ async def _handle_event(event):
     )
 
 
-async def _connect(id: str) -> None:
+async def _subscribe(id: str) -> None:
     room1 = live.LiveDanmaku(id)  # type: ignore
     room1.add_event_listener("ALL", _handle_event)  # type: ignore
 
@@ -165,6 +165,39 @@ async def _connect(id: str) -> None:
         if room1.get_status() == room1.STATUS_ESTABLISHED:
             await room1.disconnect()
 
+
+async def _poll(id: str, interval_secs: int) -> None:
+    last_is_live = False
+    while True:
+        try:
+            data = await room.get_with_cache(id, ttl=interval_secs)
+            is_live = data["data"]["room_info"]["live_status"] == 1
+            if is_live and not last_is_live:
+                now = int(time.time())
+                await _handle_event(
+                    {
+                        "room_display_id": id,
+                        "room_real_id": int(id),
+                        "type": "LIVE",
+                        "data": {
+                            "cmd": "LIVE",
+                            "is_report": False,
+                            "live_key": "",
+                            "live_model": 0,
+                            "live_platform": "",
+                            "live_time": now,
+                            "msg_id": "polling-based-live-%s" % (now,),
+                            "roomid": int(id),
+                            "send_time": now,
+                            "sub_session_key": "",
+                            "voice_background": "",
+                        },
+                    }
+                )
+            last_is_live = is_live
+            await asyncio.sleep(interval_secs)
+        except:
+            logging.exception("error during polling")
 
 async def main():
     os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
@@ -193,7 +226,17 @@ async def main():
             f"[启动] - {_format_time(datetime.now())}",
             "服务启动测试邮件",
         )
-    await asyncio.gather(*(_connect(i) for i in config.discover_bilibili_room_id()))  # type: ignore
+
+    def jobs():
+        room_ids = list(config.discover_bilibili_room_id())
+        if config.POLLING_INTERVAL_SECS > 0:
+            for i in room_ids:
+                yield _poll(i, config.POLLING_INTERVAL_SECS)
+
+        for i in room_ids:
+            yield _subscribe(i)
+
+    await asyncio.gather(*jobs())  # type: ignore
     LOGGER.info("未配置要监控的直播间，请查看 README.md")
 
 
