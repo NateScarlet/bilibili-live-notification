@@ -42,7 +42,6 @@ async def _fetch(rid: str) -> dict:
 
 
 _CACHE: Dict[str, Tuple[float, dict]] = dict()
-CACHE_MU = contextvars.ContextVar("CACHE_MU")
 ROOM_POPUPARITY = defaultdict(lambda: 0)
 
 
@@ -59,12 +58,11 @@ async def get(rid: str, *, ttl: float = 3600) -> dict:
     await asyncio.sleep(0)
     rid = str(rid)
     try:
-        async with CACHE_MU.get():
-            if rid not in _CACHE or _CACHE[rid][0] < time.time() - ttl:
-                await rate_limit.BILIBILI_API.get().wait()
-                entry = (time.time(), await _fetch(rid))
-                _CACHE[rid] = entry
-                ROOM_POPUPARITY[rid] = entry[1]["popularity"]
+        if rid not in _CACHE or _CACHE[rid][0] < time.time() - ttl:
+            await rate_limit.BILIBILI_API.get().wait()
+            entry = (time.time(), await _fetch(rid))
+            _CACHE[rid] = entry
+            ROOM_POPUPARITY[rid] = entry[1]["popularity"]
     except aiohttp.client_exceptions.ClientOSError:
         LOGGER.warning("possible rate limit reached during fetch: %s, will retry", rid)
         await asyncio.sleep(0)

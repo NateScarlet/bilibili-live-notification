@@ -169,6 +169,7 @@ async def _subscribe(id: str) -> None:
 async def _poll(id: str, interval_secs: int) -> None:
     last_is_live = False
     while True:
+        await asyncio.sleep(0)
         try:
             data = await room.get(id, ttl=interval_secs)
             is_live = data["data"]["room_info"]["live_status"] == 1
@@ -195,14 +196,13 @@ async def _poll(id: str, interval_secs: int) -> None:
                     }
                 )
             last_is_live = is_live
-            await asyncio.sleep(interval_secs)
         except:
             logging.exception("error during polling")
+        await asyncio.sleep(interval_secs)
 
 async def main():
     os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")
     rate_limit.BILIBILI_API.set(rate_limit.RateLimiter(50, 1))
-    room.CACHE_MU.set(asyncio.Lock())
 
     handler = logging.StreamHandler()
     handler.setFormatter(
