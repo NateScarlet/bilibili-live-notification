@@ -16,7 +16,7 @@ from . import config, rate_limit
 LOGGER = logging.getLogger(__name__)
 
 
-async def get(rid: str) -> dict:
+async def _fetch(rid: str) -> dict:
     """Get room data.
 
     Args:
@@ -25,7 +25,7 @@ async def get(rid: str) -> dict:
     Returns:
         dict: normalized data
     """
-    LOGGER.info("will fetch room data: %s", rid)
+    LOGGER.info("will fetch: %s", rid)
     name = config.get_room_name(rid)
     info = await live.LiveRoom(rid).get_room_info()  # type: ignore
     assert info, "info is None"
@@ -37,7 +37,7 @@ async def get(rid: str) -> dict:
         data=info,
         popularity=info["room_info"]["online"],
     )
-    LOGGER.debug("did fetch room data: %s: %s", rid, ret)
+    LOGGER.debug("did fetch: %s: %s", rid, ret)
     return ret
 
 
@@ -46,7 +46,7 @@ CACHE_MU = contextvars.ContextVar("CACHE_MU")
 ROOM_POPUPARITY = defaultdict(lambda: 0)
 
 
-async def get_with_cache(rid: str, *, ttl: float = 3600) -> dict:
+async def get(rid: str, *, ttl: float = 3600) -> dict:
     """Get room data with a ttl cache
 
     Args:
@@ -62,13 +62,13 @@ async def get_with_cache(rid: str, *, ttl: float = 3600) -> dict:
         async with CACHE_MU.get():
             if rid not in _CACHE or _CACHE[rid][0] < time.time() - ttl:
                 await rate_limit.BILIBILI_API.get().wait()
-                entry = (time.time(), await get(rid))
+                entry = (time.time(), await _fetch(rid))
                 _CACHE[rid] = entry
                 ROOM_POPUPARITY[rid] = entry[1]["popularity"]
     except aiohttp.client_exceptions.ClientOSError:
-        LOGGER.warning("possible rate limit reached during fetch room data: %s, will retry", rid)
+        LOGGER.warning("possible rate limit reached during fetch: %s, will retry", rid)
         await asyncio.sleep(0)
-        return await get_with_cache(rid, ttl=ttl)
+        return await get(rid, ttl=ttl)
 
     _, ret = _CACHE[rid]
     ret["popularity"] = ROOM_POPUPARITY[rid]

@@ -26,7 +26,7 @@ async def _handle_live(event):
 
     # TODO: support template for email subject and body
     now = datetime.now()
-    room_data = await room.get_with_cache(rid)
+    room_data = await room.get(rid)
     emailtools.send(
         config.get_room_email_to(rid),
         f'[开播]{room_data["name"]} - {_format_time(now)}',
@@ -128,14 +128,14 @@ async def _handle_event(event):
 
     # update room data cache
     if event_type in ("LIVE", "PREPARING", "ROOM_CHANGE"):
-        room_data = await room.get_with_cache(rid, ttl=0)
+        room_data = await room.get(rid, ttl=0)
 
     if event_type == "LIVE":
         await _handle_live(event)
     elif event_type == "VIEW":
         await _handle_view(event)
 
-    room_data = await room.get_with_cache(rid)
+    room_data = await room.get(rid)
     data = {
         **dict(
             event=event,
@@ -170,7 +170,7 @@ async def _poll(id: str, interval_secs: int) -> None:
     last_is_live = False
     while True:
         try:
-            data = await room.get_with_cache(id, ttl=interval_secs)
+            data = await room.get(id, ttl=interval_secs)
             is_live = data["data"]["room_info"]["live_status"] == 1
             if is_live and not last_is_live:
                 now = int(time.time())
