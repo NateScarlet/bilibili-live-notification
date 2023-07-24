@@ -112,7 +112,7 @@ def _distinct_event(event, data: dict) -> bool:
     return False
 
 
-async def _handle_event(event):
+async def _handle_event(event, *, skip_room_data_update=False):
     event_type = event["type"]
     rid = str(event["room_display_id"])
 
@@ -127,7 +127,7 @@ async def _handle_event(event):
         return
 
     # update room data cache
-    if event_type in ("LIVE", "PREPARING", "ROOM_CHANGE"):
+    if not skip_room_data_update and event_type in ("LIVE", "PREPARING", "ROOM_CHANGE"):
         room_data = await room.get(rid, ttl=0)
 
     if event_type == "LIVE":
@@ -171,7 +171,7 @@ async def _poll(id: str, interval_secs: int) -> None:
     while True:
         await asyncio.sleep(0)
         try:
-            data = await room.get(id, ttl=interval_secs)
+            data = await room.get(id, ttl=0)
             is_live = data["data"]["room_info"]["live_status"] == 1
             if is_live and not last_is_live:
                 now = int(time.time())
@@ -193,12 +193,14 @@ async def _poll(id: str, interval_secs: int) -> None:
                             "sub_session_key": "",
                             "voice_background": "",
                         },
-                    }
+                    },
+                    skip_room_data_update=True,
                 )
             last_is_live = is_live
         except:
             logging.exception("error during polling")
         await asyncio.sleep(interval_secs)
+
 
 async def main():
     os.environ.setdefault("BILIBILI_EVENT_THROTTLE_LIVE", "600")

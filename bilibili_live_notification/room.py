@@ -25,7 +25,9 @@ async def _fetch(rid: str) -> dict:
     Returns:
         dict: normalized data
     """
-    LOGGER.info("will fetch: %s", rid)
+    await rate_limit.BILIBILI_API.get().wait()
+    start_time = time.time()
+    LOGGER.info("will fetch: id=%s", rid)
     name = config.get_room_name(rid)
     info = await live.LiveRoom(rid).get_room_info()  # type: ignore
     assert info, "info is None"
@@ -37,12 +39,13 @@ async def _fetch(rid: str) -> dict:
         data=info,
         popularity=info["room_info"]["online"],
     )
-    LOGGER.debug("did fetch: %s: %s", rid, ret)
+    LOGGER.info("did fetch: id=%s elapsed=%fs", rid, time.time() - start_time)
     return ret
 
 
 _CACHE: Dict[str, Tuple[float, dict]] = dict()
 ROOM_POPUPARITY = defaultdict(lambda: 0)
+_SINGLE_FLIGHT = defaultdict(lambda: asyncio.locks.Lock())
 
 
 async def get(rid: str, *, ttl: float = 3600) -> dict:
@@ -55,18 +58,22 @@ async def get(rid: str, *, ttl: float = 3600) -> dict:
     Returns:
         dict: room data.
     """
-    await asyncio.sleep(0)
+
     rid = str(rid)
-    try:
-        if rid not in _CACHE or _CACHE[rid][0] < time.time() - ttl:
-            await rate_limit.BILIBILI_API.get().wait()
-            entry = (time.time(), await _fetch(rid))
-            _CACHE[rid] = entry
-            ROOM_POPUPARITY[rid] = entry[1]["popularity"]
-    except aiohttp.client_exceptions.ClientOSError:
-        LOGGER.warning("possible rate limit reached during fetch: %s, will retry", rid)
-        await asyncio.sleep(0)
-        return await get(rid, ttl=ttl)
+    if rid not in _CACHE or _CACHE[rid][0] < time.time() - ttl:
+        in_flight = _SINGLE_FLIGHT[rid].locked()
+        try:
+            async with _SINGLE_FLIGHT[rid]:
+                if not in_flight:
+                    entry = (time.time(), await _fetch(rid))
+                    _CACHE[rid] = entry
+                    ROOM_POPUPARITY[rid] = entry[1]["popularity"]
+        except aiohttp.client_exceptions.ClientOSError:
+            LOGGER.warning(
+                "possible rate limit reached during fetch: %s, will retry", rid
+            )
+            await asyncio.sleep(0)
+            return await get(rid, ttl=ttl)
 
     _, ret = _CACHE[rid]
     ret["popularity"] = ROOM_POPUPARITY[rid]
