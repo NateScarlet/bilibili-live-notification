@@ -168,11 +168,14 @@ async def _subscribe(id: str) -> None:
 
 async def _poll(id: str, interval_secs: int) -> None:
     last_is_live = False
+    last_title = ""
     while True:
         await asyncio.sleep(0)
         try:
             data = await room.get(id, max_age_secs=0)
-            is_live = data["data"]["room_info"]["live_status"] == 1
+            ri = data["data"]["room_info"]
+            is_live = ri["live_status"] == 1
+            title = ri["title"]
             if is_live and not last_is_live:
                 now = int(time.time())
                 await _handle_event(
@@ -196,6 +199,28 @@ async def _poll(id: str, interval_secs: int) -> None:
                     },
                     skip_room_data_update=True,
                 )
+            elif last_title and title != last_title:
+                await _handle_event(
+                    {
+                        "room_display_id": id,
+                        "room_real_id": int(id),
+                        "type": "ROOM_CHANGE",
+                        "data": {
+                            "cmd": "ROOM_CHANGE",
+                            "data": {
+                                "title": title,
+                                "area_id": ri["area_id"],
+                                "parent_area_id": ri["parent_area_id"],
+                                "area_name": ri["area_name"],
+                                "parent_area_name": ri["parent_area_name"],
+                                "live_key": "0",
+                                "sub_session_key": "",
+                            },
+                        },
+                    },
+                    skip_room_data_update=True,
+                )
+            last_title = title
             last_is_live = is_live
         except:
             logging.exception("error during polling")
