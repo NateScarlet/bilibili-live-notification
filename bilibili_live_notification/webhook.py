@@ -37,8 +37,19 @@ async def trigger(
         }
         body = config.get(f"WEBHOOK_BODY_{name}", data)
         async with aiohttp.request(method, url, headers=headers, data=body) as resp:
+            body = await resp.text(errors="replace")
+            if resp.status != 200:
+                raise RuntimeError(
+                    "response status %d from %s: %s",
+                    resp.status,
+                    resp.host,
+                    body,
+                )
             _LOGGER.info(
-                "did trigger: %s: %s: %s", name, resp.status, await resp.read()
+                "did trigger: %s: %s: %s",
+                name,
+                resp.status,
+                body,
             )
     except Exception:
         _LOGGER.exception("failed: %s", name)
