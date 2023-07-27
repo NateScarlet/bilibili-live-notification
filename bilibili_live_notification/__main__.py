@@ -239,7 +239,7 @@ async def main():
         )
     )
     debug_logger_names = config.get_csv("DEBUG")
-    for logger in [LOGGER, webhook.LOGGER, room.LOGGER]:
+    for logger in [LOGGER, webhook._LOGGER, room.LOGGER]:
         logger.setLevel(
             logging.DEBUG if logger.name in debug_logger_names else logging.INFO
         )
