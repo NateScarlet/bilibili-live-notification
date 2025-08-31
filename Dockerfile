@@ -20,7 +20,7 @@ RUN set -ex\
         gcc \
         g++ \
         musl-dev \
-    && pip install -U pip\
+    && pip install -U pip 'Setuptools<81'\
     && pip install -r ./requirements.txt \
     && apk del .build-deps \
     && apk add --no-cache \
