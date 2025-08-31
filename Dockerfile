@@ -22,6 +22,8 @@ RUN set -ex\
         musl-dev \
         libxml2-dev \
         libxslt-dev \
+        jpeg-dev \
+        zlib-dev \
     && pip install -U pip 'Setuptools<81'\
     && pip install -r ./requirements.txt \
     && apk del .build-deps \
