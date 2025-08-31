@@ -20,6 +20,8 @@ RUN set -ex\
         gcc \
         g++ \
         musl-dev \
+        libxml2-dev \
+        libxslt-dev \
     && pip install -U pip 'Setuptools<81'\
     && pip install -r ./requirements.txt \
     && apk del .build-deps \
