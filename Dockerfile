@@ -24,8 +24,8 @@ RUN set -ex\
         libxslt-dev \
         jpeg-dev \
         zlib-dev \
-    && pip install -U pip 'Setuptools<81'\
-    && pip install -r ./requirements.txt \
+    && pip install --root-user-action ignore -U pip 'Setuptools<81'\
+    && pip install --root-user-action ignore -r ./requirements.txt \
     && apk del .build-deps \
     && apk add --no-cache \
         libstdc++ 
