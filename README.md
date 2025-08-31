@@ -75,8 +75,8 @@
 ## 从命令行运行
 
 ```bash
-python3.8 -m pip install -r requirements.txt
-python3.8 -m bilibili_live_notification
+python3.12 -m pip install -r requirements.txt
+python3.12 -m bilibili_live_notification
 ```
 
 ## Docker 部署
