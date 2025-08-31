@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "launch": {
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "name": "Python: 模块",
+          "type": "debugpy",
+          "request": "launch",
+          "module": "bilibili_live_notification"
+        }
+      ],
+      "compounds": []
+    }
+  }
+}

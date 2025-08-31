@@ -1,4 +1,5 @@
-"""Send email notification when bilibili live start. """
+"""Send email notification when bilibili live start."""
+
 import asyncio
 import json
 import logging
@@ -7,7 +8,8 @@ import time
 from datetime import datetime
 from typing import Dict, Tuple
 
-from bilibili_api import live
+from bilibili_api import live, select_client
+
 
 from . import config, emailtools, room, webhook, rate_limit
 
